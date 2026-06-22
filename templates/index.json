@@ -1,0 +1,827 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "nine15_slider_aMwGjn": {
+      "type": "nine15--slider",
+      "blocks": {
+        "slider_cVYV3h": {
+          "type": "slider",
+          "settings": {
+            "image": "shopify://shop_images/Summer_2026_desktop_HP_01_9481c07a-903b-4123-9e15-0d6f5c2c9aaa.jpg",
+            "image_mob": "shopify://shop_images/Summer_2026_mobile_HP_01_a35de403-8fd5-4eb2-b28a-a03072ab1c22.jpg",
+            "no_lazyload": false,
+            "title": "",
+            "subtitle": "",
+            "text": "",
+            "btn_txt": "",
+            "btn_url": "shopify://collections/summer-sale",
+            "btn_anchor_url": "",
+            "force_slide_link": true,
+            "stars": "",
+            "align_bg": "center",
+            "bg_color": "#ffffff",
+            "opacity": 0,
+            "align_text": "left",
+            "vert_align": 50,
+            "hor_align": 10,
+            "width": "450px",
+            "title_color": "#000000",
+            "font_size_title": 60,
+            "subtitle_color": "#000000",
+            "font_size_subtitle": 20,
+            "text_color": "#333333",
+            "font_size_text": 16,
+            "btn_style": "primary",
+            "color_button_text": "",
+            "color_button": "",
+            "color_button_border": "",
+            "color_button_text_hover": "",
+            "color_button_hover": "",
+            "color_button_border_hover": "",
+            "align_bg_mob": "center",
+            "bg_color_mob": "#000000",
+            "opacity_mob": 10,
+            "align_text_mob": "center",
+            "vert_align_mob": 50,
+            "hor_align_mob": 50,
+            "width_mob": "450px",
+            "title_color_mob": "",
+            "font_size_title_mob": 32,
+            "subtitle_color_mob": "",
+            "font_size_subtitle_mob": 18,
+            "text_color_mob": "",
+            "font_size_text_mob": 16,
+            "btn_style_mob": "inherit",
+            "color_button_text_mob": "",
+            "color_button_mob": "",
+            "color_button_border_mob": "",
+            "color_button_text_hover_mob": "",
+            "color_button_hover_mob": "",
+            "color_button_border_hover_mob": "",
+            "video_ratio": "56",
+            "video_url": "",
+            "video_hosted": "",
+            "btn_txt_modal": "Watch Video",
+            "video_modal": "",
+            "custom_css": ""
+          }
+        }
+      },
+      "block_order": [
+        "slider_cVYV3h"
+      ],
+      "settings": {
+        "set_height": false,
+        "mob_rel": true,
+        "show_mobile_overlay_sooner": false,
+        "image_height": "clamp(500px,54%,100vh)",
+        "image_height_mob": "",
+        "auto_slide": true,
+        "fade": false,
+        "pause": "5000",
+        "custom_css": ""
+      }
+    },
+    "custom_slider_PL3MzF": {
+      "type": "custom-slider",
+      "name": "Custom Slider",
+      "settings": {
+        "source_type": "collection",
+        "collection": "sale",
+        "slider_title": "Featured Products",
+        "show_title": false,
+        "show_on_mobile": false
+      }
+    },
+    "video_zM7bNa": {
+      "type": "video",
+      "disabled": true,
+      "name": "t:sections.video.presets.name",
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "video_autoplay": true,
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "description": "",
+        "full_width": true,
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "flexible_block_g74AXK": {
+      "type": "flexible-block",
+      "blocks": {
+        "image_block_kj8bVN": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/Summer_2026_desktop_HP_new.jpg",
+            "mobile": "shopify://shop_images/Summer_2026_desktop_HP_new.jpg",
+            "link": "shopify://collections/new"
+          }
+        },
+        "image_block_3cqFDn": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/Summer_2026_desktop_HP_04_bae82fb2-d040-427b-8d75-3bed17454837.jpg",
+            "mobile": "shopify://shop_images/Summer_2026_desktop_HP_04_bae82fb2-d040-427b-8d75-3bed17454837.jpg",
+            "link": "shopify://collections/the-jewelry-collection"
+          }
+        },
+        "image_block_ytmnwk": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/Summer_2026_desktop_HP_03_4f1f15e2-acb6-4fa9-bb4a-56909f08f93f.jpg",
+            "mobile": "shopify://shop_images/Summer_2026_desktop_HP_03_4f1f15e2-acb6-4fa9-bb4a-56909f08f93f.jpg",
+            "link": "shopify://collections/crossbodies"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_kj8bVN",
+        "image_block_3cqFDn",
+        "image_block_ytmnwk"
+      ],
+      "name": "Flexible Image Blocks (3)",
+      "settings": {
+        "block_gap": 20
+      }
+    },
+    "nine15_slider_gW8FGh": {
+      "type": "nine15--slider",
+      "blocks": {
+        "slider_cMVJM6": {
+          "type": "slider",
+          "settings": {
+            "image": "shopify://shop_images/Summer_2026_desktop_HP_06_3f85a8b2-104b-4fc0-a08e-1bd58da28226.jpg",
+            "image_mob": "shopify://shop_images/Summer_2026_mobile_HP_06.jpg",
+            "no_lazyload": false,
+            "title": "",
+            "subtitle": "",
+            "text": "",
+            "btn_txt": "",
+            "btn_url": "shopify://collections/bag-bestsellers",
+            "btn_anchor_url": "",
+            "force_slide_link": true,
+            "stars": "",
+            "align_bg": "center",
+            "bg_color": "#000000",
+            "opacity": 0,
+            "align_text": "left",
+            "vert_align": 50,
+            "hor_align": 10,
+            "width": "450px",
+            "title_color": "#000000",
+            "font_size_title": 60,
+            "subtitle_color": "#000000",
+            "font_size_subtitle": 20,
+            "text_color": "#333333",
+            "font_size_text": 16,
+            "btn_style": "primary",
+            "color_button_text": "",
+            "color_button": "",
+            "color_button_border": "",
+            "color_button_text_hover": "",
+            "color_button_hover": "",
+            "color_button_border_hover": "",
+            "align_bg_mob": "center",
+            "bg_color_mob": "#000000",
+            "opacity_mob": 10,
+            "align_text_mob": "center",
+            "vert_align_mob": 50,
+            "hor_align_mob": 50,
+            "width_mob": "450px",
+            "title_color_mob": "",
+            "font_size_title_mob": 32,
+            "subtitle_color_mob": "",
+            "font_size_subtitle_mob": 18,
+            "text_color_mob": "",
+            "font_size_text_mob": 16,
+            "btn_style_mob": "inherit",
+            "color_button_text_mob": "",
+            "color_button_mob": "",
+            "color_button_border_mob": "",
+            "color_button_text_hover_mob": "",
+            "color_button_hover_mob": "",
+            "color_button_border_hover_mob": "",
+            "video_ratio": "56",
+            "video_url": "",
+            "video_hosted": "",
+            "btn_txt_modal": "Watch Video",
+            "video_modal": "",
+            "custom_css": ""
+          }
+        }
+      },
+      "block_order": [
+        "slider_cMVJM6"
+      ],
+      "settings": {
+        "set_height": false,
+        "mob_rel": true,
+        "show_mobile_overlay_sooner": false,
+        "image_height": "clamp(500px,54%,100vh)",
+        "image_height_mob": "",
+        "auto_slide": true,
+        "fade": false,
+        "pause": "5000",
+        "custom_css": ""
+      }
+    },
+    "video_pKJpcB": {
+      "type": "video",
+      "name": "t:sections.video.presets.name",
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "video_file": "shopify://files/videos/VIDEO ARTISTS FINAL_SUB_MUSIC 2.mp4",
+        "video_autoplay": true,
+        "video_url": "",
+        "description": "",
+        "full_width": true,
+        "color_scheme": "background-1",
+        "padding_top": 8,
+        "padding_bottom": 0
+      }
+    },
+    "nine15_custom_html_GCJVbW": {
+      "type": "nine15--custom-html",
+      "disabled": true,
+      "settings": {
+        "title": "",
+        "custom_html": "{%- liquid \n\n  assign vid = \"https://cdn.jwplayer.com/videos/OYIq6GYa-sZAyLL6U.mp4\"\n  assign img = \"https://cdn.jwplayer.com/thumbs/OYIq6GYa-1920.jpg\"\n%}\n{% render 'snippet--video', \n  vidHosted: vid, \n  hostedThumb: img,\n  normalMobile: true,\n  autoPlay: true\n%}",
+        "custom_css": ""
+      }
+    },
+    "nine15_slider_h7fQEL": {
+      "type": "nine15--slider",
+      "blocks": {
+        "slider_Fq8ykq": {
+          "type": "slider",
+          "settings": {
+            "image": "shopify://shop_images/Summer_2026_desktop_HP_07_80016e25-865c-40bd-bdec-dadc0d7c9c2e.jpg",
+            "image_mob": "shopify://shop_images/Summer_2026_mobile_HP_07.jpg",
+            "no_lazyload": false,
+            "title": "",
+            "subtitle": "",
+            "text": "",
+            "btn_txt": "",
+            "btn_url": "shopify://collections/bag-charms",
+            "btn_anchor_url": "",
+            "force_slide_link": false,
+            "stars": "",
+            "align_bg": "center",
+            "bg_color": "#000000",
+            "opacity": 0,
+            "align_text": "left",
+            "vert_align": 50,
+            "hor_align": 10,
+            "width": "450px",
+            "title_color": "#000000",
+            "font_size_title": 60,
+            "subtitle_color": "#000000",
+            "font_size_subtitle": 20,
+            "text_color": "#333333",
+            "font_size_text": 16,
+            "btn_style": "primary",
+            "color_button_text": "",
+            "color_button": "",
+            "color_button_border": "",
+            "color_button_text_hover": "",
+            "color_button_hover": "",
+            "color_button_border_hover": "",
+            "align_bg_mob": "inherit",
+            "bg_color_mob": "",
+            "opacity_mob": 0,
+            "align_text_mob": "inherit",
+            "vert_align_mob": 50,
+            "hor_align_mob": 50,
+            "width_mob": "",
+            "title_color_mob": "",
+            "font_size_title_mob": 32,
+            "subtitle_color_mob": "",
+            "font_size_subtitle_mob": 18,
+            "text_color_mob": "",
+            "font_size_text_mob": 16,
+            "btn_style_mob": "inherit",
+            "color_button_text_mob": "",
+            "color_button_mob": "",
+            "color_button_border_mob": "",
+            "color_button_text_hover_mob": "",
+            "color_button_hover_mob": "",
+            "color_button_border_hover_mob": "",
+            "video_ratio": "56",
+            "video_url": "",
+            "video_hosted": "",
+            "btn_txt_modal": "Watch Video",
+            "video_modal": "",
+            "custom_css": ""
+          }
+        }
+      },
+      "block_order": [
+        "slider_Fq8ykq"
+      ],
+      "settings": {
+        "set_height": false,
+        "mob_rel": true,
+        "show_mobile_overlay_sooner": false,
+        "image_height": "clamp(500px,54%,100vh)",
+        "image_height_mob": "",
+        "auto_slide": true,
+        "fade": false,
+        "pause": "4000",
+        "custom_css": ""
+      }
+    },
+    "nine15_slider_r3ycYz": {
+      "type": "nine15--slider",
+      "blocks": {
+        "slider_xXypQx": {
+          "type": "slider",
+          "settings": {
+            "image": "shopify://shop_images/MaySummer_2026_desktop_HP_04_a46fe552-8bc9-422c-a7e5-ac954bcd24dc.jpg",
+            "image_mob": "shopify://shop_images/MaySummer_2026_mobile_HP_04.jpg",
+            "no_lazyload": false,
+            "title": "",
+            "subtitle": "",
+            "text": "",
+            "btn_txt": "",
+            "btn_url": "shopify://collections/bag-bestsellers",
+            "btn_anchor_url": "",
+            "force_slide_link": false,
+            "stars": "",
+            "align_bg": "center",
+            "bg_color": "#000000",
+            "opacity": 0,
+            "align_text": "left",
+            "vert_align": 50,
+            "hor_align": 10,
+            "width": "450px",
+            "title_color": "#000000",
+            "font_size_title": 60,
+            "subtitle_color": "#000000",
+            "font_size_subtitle": 20,
+            "text_color": "#333333",
+            "font_size_text": 16,
+            "btn_style": "primary",
+            "color_button_text": "",
+            "color_button": "",
+            "color_button_border": "",
+            "color_button_text_hover": "",
+            "color_button_hover": "",
+            "color_button_border_hover": "",
+            "align_bg_mob": "inherit",
+            "bg_color_mob": "",
+            "opacity_mob": 0,
+            "align_text_mob": "inherit",
+            "vert_align_mob": 50,
+            "hor_align_mob": 50,
+            "width_mob": "",
+            "title_color_mob": "",
+            "font_size_title_mob": 32,
+            "subtitle_color_mob": "",
+            "font_size_subtitle_mob": 18,
+            "text_color_mob": "",
+            "font_size_text_mob": 16,
+            "btn_style_mob": "inherit",
+            "color_button_text_mob": "",
+            "color_button_mob": "",
+            "color_button_border_mob": "",
+            "color_button_text_hover_mob": "",
+            "color_button_hover_mob": "",
+            "color_button_border_hover_mob": "",
+            "video_ratio": "56",
+            "video_url": "",
+            "video_hosted": "",
+            "btn_txt_modal": "Watch Video",
+            "video_modal": "",
+            "custom_css": ""
+          }
+        }
+      },
+      "block_order": [
+        "slider_xXypQx"
+      ],
+      "disabled": true,
+      "settings": {
+        "set_height": false,
+        "mob_rel": true,
+        "show_mobile_overlay_sooner": false,
+        "image_height": "clamp(500px,54%,100vh)",
+        "image_height_mob": "",
+        "auto_slide": true,
+        "fade": false,
+        "pause": "4000",
+        "custom_css": ""
+      }
+    },
+    "review_section_jQC4TE": {
+      "type": "review-section",
+      "blocks": {
+        "review_BWNnCe": {
+          "type": "review",
+          "settings": {
+            "product_image": "shopify://shop_images/CLST5505NATUOS_01_3b036adf-3c40-4bcd-9cc5-5211eb19abbd.png",
+            "image_link": "shopify://products/hola-classic-tote-bag",
+            "product_title": "Shop the Hola Classic Tote",
+            "stars": 5,
+            "price": "$215",
+            "quote": "To say I love it is an understatement, it's beautiful and perfect, love the opportunity to see the leather naturally darken.",
+            "name": "",
+            "position": "",
+            "button_label": "SHOP NOW",
+            "button_link": "shopify://products/hola-classic-tote-bag"
+          }
+        },
+        "review_di7VAD": {
+          "type": "review",
+          "settings": {
+            "product_image": "shopify://shop_images/JTST4788BSWLOS_01.jpg",
+            "image_link": "shopify://products/sophie-jetsetter",
+            "product_title": "Shop the Sophie Jetsetter",
+            "stars": 5,
+            "price": "",
+            "quote": "I absolutely love this bag. I have been looking for something this size to replace a bag that I've been using for almost 15 years. I have other Consuela purses/bags and when I saw this, I knew it was the one. It is very well made like all Consuela products.I know I will carry this bag for many years.",
+            "name": "",
+            "position": "",
+            "button_label": "SHOP NOW",
+            "button_link": "shopify://products/sophie-jetsetter"
+          }
+        },
+        "review_KgdDeV": {
+          "type": "review",
+          "settings": {
+            "product_image": "shopify://shop_images/6964_01.jpg",
+            "image_link": "shopify://products/thunderbird-downtown-crossbody",
+            "product_title": "Shop the Thunderbird Downtown Crossbody",
+            "stars": 5,
+            "price": "$255",
+            "quote": "I am so glad I picked this purse!! It is so unique and the perfect size for me! It’s amazing quality and I love the charms that come with it!! Overall just AMAZING.",
+            "name": "",
+            "position": "",
+            "button_label": "SHOP NOW",
+            "button_link": "shopify://products/thunderbird-downtown-crossbody"
+          }
+        },
+        "review_JwLyQk": {
+          "type": "review",
+          "settings": {
+            "product_image": "shopify://shop_images/7814_1.jpg",
+            "image_link": "shopify://products/mona-basic-bag",
+            "product_title": "Shop the Mona Basic Bag",
+            "stars": 5,
+            "price": "$265",
+            "quote": "I love this bag! This is my 1st Consuela bag, and I absolutely love the quality, style, and look.",
+            "name": "",
+            "position": "",
+            "button_label": "SHOP NOW",
+            "button_link": "shopify://products/mona-basic-bag"
+          }
+        },
+        "review_7GQNLU": {
+          "type": "review",
+          "settings": {
+            "product_image": "shopify://shop_images/DTXB1355VFSQOS_HERO_01.jpg",
+            "image_link": "shopify://products/sally-downtown-crossbody",
+            "product_title": "Shop the Sally Downtown Crossbody",
+            "stars": 5,
+            "price": "$265",
+            "quote": "This purse is the perfect size and the pattern is so beautiful! Love it!",
+            "name": "",
+            "position": "",
+            "button_label": "SHOP NOW",
+            "button_link": "shopify://products/sally-downtown-crossbody"
+          }
+        },
+        "review_VnBRnx": {
+          "type": "review",
+          "disabled": true,
+          "settings": {
+            "product_image": "shopify://shop_images/CLST1570CYSNOS_01_ProductRotator.jpg",
+            "image_link": "shopify://products/clay-classic-tote",
+            "product_title": "Shop the Clay Classic Tote",
+            "stars": 5,
+            "price": "$265",
+            "quote": "I knew when I first saw my friend’s Consuela bag that I had to have one! I love my Clay Classic Tote. The snake skin texture, woven straps, and beaded butterfly tassel add so many textures and color to my style! This tote’s size can carry anything and everything I need! I am in love!",
+            "name": "",
+            "position": "",
+            "button_label": "SHOP NOW",
+            "button_link": "shopify://products/clay-classic-tote"
+          }
+        }
+      },
+      "block_order": [
+        "review_BWNnCe",
+        "review_di7VAD",
+        "review_KgdDeV",
+        "review_JwLyQk",
+        "review_7GQNLU",
+        "review_VnBRnx"
+      ],
+      "name": "Scrolling Reviews",
+      "settings": {
+        "subtitle": "OVER 25,000 FIVE STAR REVIEWS",
+        "title": "WHAT PEOPLE ARE SAYING",
+        "auto_scroll": true,
+        "scroll_speed": 5
+      }
+    },
+    "grid_image_iM6ipU": {
+      "type": "grid-image",
+      "blocks": {
+        "style_block_erLUfi": {
+          "type": "style_block",
+          "settings": {
+            "image": "shopify://shop_images/Summer_2026_desktop_HP_05.jpg",
+            "subhead": "Crossbody Bags",
+            "link": "shopify://collections/crossbodies"
+          }
+        },
+        "style_block_Bcnm9f": {
+          "type": "style_block",
+          "settings": {
+            "image": "shopify://shop_images/Summer_2026_desktop_HP_06.jpg",
+            "subhead": "Jewelry",
+            "link": "shopify://collections/the-jewelry-collection"
+          }
+        },
+        "style_block_AQzfFc": {
+          "type": "style_block",
+          "settings": {
+            "image": "shopify://shop_images/Summer_2026_desktop_HP_07.jpg",
+            "subhead": "Tote Bags",
+            "link": "shopify://collections/totes"
+          }
+        },
+        "style_block_ymifQM": {
+          "type": "style_block",
+          "settings": {
+            "image": "shopify://shop_images/Summer_2026_desktop_HP_08.jpg",
+            "subhead": "Accessories",
+            "link": "shopify://collections/accessories"
+          }
+        }
+      },
+      "block_order": [
+        "style_block_erLUfi",
+        "style_block_Bcnm9f",
+        "style_block_AQzfFc",
+        "style_block_ymifQM"
+      ],
+      "disabled": true,
+      "name": "Shop Top Styles (8)",
+      "settings": {
+        "main_title": "Shop Top Styles"
+      }
+    },
+    "nine15_featured_testimonial_7XtYp3": {
+      "type": "nine15--featured-testimonial",
+      "blocks": {
+        "block_dUiYTV": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/CLST5505NATUOS_01.jpg",
+            "title": "Shop the Hola Classic Tote",
+            "stars": "5",
+            "quote": "To say I love it is an understatement, it's beautiful and perfect, love the opportunity to see the leather naturally darken.",
+            "name": "",
+            "position": "",
+            "url": "shopify://products/hola-classic-tote-bag",
+            "metafield_image": ""
+          }
+        },
+        "block_kCafCh": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/JTST4788BSWLOS_01.jpg",
+            "title": "Shop the Sophie Jetsetter",
+            "stars": "5",
+            "quote": "I absolutely love this bag. I have been looking for something this size to replace a bag that I've been using for almost 15 years. I have other Consuela purses/bags and when I saw this, I knew it was the one. It is very well made like all Consuela products.I know I will carry this bag for many years.",
+            "name": "",
+            "position": "",
+            "url": "shopify://products/sophie-jetsetter",
+            "metafield_image": ""
+          }
+        },
+        "block_mghWee": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/6964_01.jpg",
+            "title": "Shop the Thunderbird Downtown Crossbody",
+            "stars": "5",
+            "quote": "I am so glad I picked this purse!! It is so unique and the perfect size for me! It’s amazing quality and I love the charms that come with it!! Overall just AMAZING.",
+            "name": "",
+            "position": "",
+            "url": "shopify://products/thunderbird-downtown-crossbody",
+            "metafield_image": ""
+          }
+        },
+        "block_cdYMMj": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/7814_1.jpg",
+            "title": "Shop the Mona Basic Bag",
+            "stars": "5",
+            "quote": "I love this bag! This is my 1st Consuela bag, and I absolutely love the quality, style, and look.",
+            "name": "",
+            "position": "",
+            "url": "shopify://products/mona-basic-bag",
+            "metafield_image": ""
+          }
+        },
+        "block_EkTxY9": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/DTXB1355VFSQOS_HERO_01.jpg",
+            "title": "Shop the Sally Downtown Crossbody",
+            "stars": "5",
+            "quote": "This purse is the perfect size and the pattern is so beautiful! Love it!",
+            "name": "",
+            "position": "",
+            "url": "shopify://products/sally-downtown-crossbody",
+            "metafield_image": ""
+          }
+        },
+        "block_bWGDxt": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/CLST1570CYSNOS_01_ProductRotator.jpg",
+            "title": "Shop the Clay Classic Tote",
+            "stars": "5",
+            "quote": "I knew when I first saw my friend’s Consuela bag that I had to have one! I love my Clay Classic Tote. The snake skin texture, woven straps, and beaded butterfly tassel add so many textures and color to my style! This tote’s size can carry anything and everything I need! I am in love!",
+            "name": "",
+            "position": "",
+            "url": "shopify://products/clay-classic-tote",
+            "metafield_image": ""
+          }
+        }
+      },
+      "block_order": [
+        "block_dUiYTV",
+        "block_kCafCh",
+        "block_mghWee",
+        "block_cdYMMj",
+        "block_EkTxY9",
+        "block_bWGDxt"
+      ],
+      "disabled": true,
+      "name": "Featured Testimonial",
+      "settings": {
+        "title": "Over 25,000 Five STAR REVIEWS\n<span>WHAT PEOPLE ARE SAYING</span>",
+        "btn_text": "",
+        "btn_url": "",
+        "text_color": "#000000",
+        "gradient": "",
+        "use_arrows": true,
+        "use_dots": false,
+        "auto_slide": false,
+        "custom_css": "== h2 {\n  font-size: 14px;\n  font-family: var(--font--graphik-wide);\n  font-weight: 700;\n  letter-spacing: 0.15em;\n\n}\n\n== h2 span {\n  font-size: 64px;\n  font-family: var(--font--graphik-cond);\n  display: block;\n  line-height: 1;\n}\n\n== h3 {\n  font-size: 14px;\n  line-height: 1.7;\n}\n\n/small/ {\n  == {\n    padding-top: var(--base-gutter--double);\n  }\n  == .image--outer {\n    // padding: 0 var(--base-gutter);\n    width: 50%;\n    margin-left: auto;\n    margin-right: auto;\n  }\n  == .slick-arrow {\n    top: 20%;\n    transform: translate(0, -50%) scale(1.3);\n  }\n  == .slick-prev {\n    left: 0;\n  }\n  == .slick-next {\n    right: 0;\n  }\n}\n\n/medium-up/ {\n  == h2 {\n    text-align: left;\n  }\n  == h2 span {\n    font-size: 90px;\n  } \n\n  == h3 {\n    font-weight: 400;\n    font-size: 12px;\n  }\n  == h3 b {\n    font-weight: 700;\n    display: block;\n  }\n}"
+      }
+    },
+    "16631863351757bf5f": {
+      "type": "nine15--custom-html",
+      "settings": {
+        "title": "instagram",
+        "custom_html": "<div class=\"page-width\">\n<h2>MTRA</h2>\n\n<a href=\"https://www.instagram.com/consuelastyle/\">\n  {% render 'icon-instagram' %}\n  <span>Follow Along on Instagram</span>\n</a>\n\n</div>\n\n<script src=\"//foursixty.com/media/scripts/fs.embed.v2.5.js\" data-feed-id=\"consuela\" data-theme=\"showcase_v2_5\" data-page-size=\"8\"></script>\n<style>.fs-has-links { display:none; } .fs-showcase_v2_5.fs-desktop .fs-entry-container { width:25% !important;padding-top:25% !important; } .fs-showcase_v2_5.fs-mobile .fs-entry-container { width:50% !important;padding-top:50% !important; } .fs-wrapper div.fs-text-container .fs-entry-title, div.fs-detail-title { font-family:Times New Roman, serif;font-style:normal;font-weight:normal;font-size:14px; } div.fs-text-container .fs-entry-date, div.fs-detail-container .fs-post-info, div.fs-wrapper div.fs-has-links::after, .fs-text-product, .fs-overlink-text { font-family:Helvetica Neue, Helvetica, Arial, sans-serif;font-style:normal;font-weight:normal;font-size:14px; } .fs-wrapper div.fs-text-container * { color:#ffffff; } .fs-wrapper div.fs-text-container { background-color:rgba(0, 0, 0, 0.8);margin:0px; } div.fs-entry-date { display:none; } div.fs-entry-title { display:none; } .fs-showcase_v2_5.fs-wrapper div.fs-timeline-entry { margin:1px; } </style>",
+        "custom_css": "== {\n  background: black;\n}\n\n== * {\n  color: white;\n}\n\n== .page-width {\n  --padding: var(--base-gutter--quarter);\n  padding-top: var(--padding);\n  padding-bottom: var(--padding);\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-between;\n  align-items: flex-end;\nmax-width: 100%;\n}\n\n== .page-width ~ div {\n  background: white;\n}\n\n== h2 {\n  margin: 0;\n  color: white;\n  font-size: 64px;\n  font-family: var(--font--graphik-cond);\n  letter-spacing: 0.02em;\n  line-height: 1;\n}\n\n== a {\n  text-decoration: none;\n  font-family: var(--font--graphik-wide);\n  font-weight: 600;\n  letter-spacing: .075em;\n  font-size: 14px;\n}\n\n== a * {\n  display: inline-block;\n  vertical-align: middle;\n  text-decoration: none;\n}\n\n== a * + * {\n  margin-left: 5px;\n}\n\n== svg {\n  width: 15px;\n  height: 15px;\n}\n\n/small/ {\n  == .page-width {\n    --padding: calc(var(--base-gutter--half) * 1.5);\n    justify-content: center;\n  }\n  == h2 {\n    margin-bottom: var(--base-gutter--quarter);\n  }\n}\n\n\n/medium-up/ {\n  == h2 {\n    font-size: 90px;\n  }\n}"
+      }
+    },
+    "16631863389293437d": {
+      "type": "nine15--ctas",
+      "blocks": {
+        "258c7656-1d92-4b9f-880e-6077a148e4ed": {
+          "type": "icon",
+          "settings": {
+            "hide_mobile": false,
+            "title": "<svg class=\"icon\" stroke=\"currentColor\" width=\"43.39\" height=\"23.034\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 43.39 23.034\">\n  <g transform=\"translate(0 0.5)\">\n    <line fill=\"none\" stroke-linejoin=\"round\" x2=\"6.93\" transform=\"translate(4.642 4.642)\"></line>\n    <line fill=\"none\" stroke-linejoin=\"round\" x2=\"4.642\" transform=\"translate(3.465 13.926)\"></line>\n    <g transform=\"translate(-0.654 -0.654)\">\n      <line fill=\"none\" stroke-linejoin=\"round\" x2=\"9.284\" transform=\"translate(0.654 9.938)\"></line>\n      <path fill=\"none\" stroke-linejoin=\"round\" d=\"M57.63,27.565a3.465,3.465,0,1,0-3.465,3.465A3.465,3.465,0,0,0,57.63,27.565Z\" transform=\"translate(-17.552 -8.343)\"></path>\n      <path fill=\"none\" stroke-linejoin=\"round\" d=\"M27.43,27.565a3.465,3.465,0,1,0-3.465,3.465,3.465,3.465,0,0,0,3.465-3.465Z\" transform=\"translate(-7.097 -8.343)\"></path>\n      <line fill=\"none\" stroke-linejoin=\"round\" x1=\"10.82\" transform=\"translate(20.334 19.223)\"></line>\n      <path fill=\"none\" stroke-linejoin=\"round\" d=\"M13.4,1H36.937a3.008,3.008,0,0,1,2.55,1.438l4.054,6.669,2.615,1.308a3.661,3.661,0,0,1,2.027,3.269v4.642A1.177,1.177,0,0,1,47.006,19.5H44.718\" transform=\"translate(-4.639 -0.346)\"></path>\n      <line fill=\"none\" stroke-linejoin=\"round\" x1=\"4.577\" transform=\"translate(8.761 19.222)\"></line>\n      <path fill=\"none\" stroke-linejoin=\"round\" d=\"M53.373,9.107H41.8V1\" transform=\"translate(-14.471 -0.346)\"></path>\n    </g>\n  </g>\n</svg>",
+            "subtitle": "Free Shipping",
+            "text": "Orders over $99 ship for free.",
+            "badge": "",
+            "button_text": "",
+            "url": "https://consuelastyle.com/pages/contact-us#shopify-section-template--14835121717302__1662423265da626889",
+            "btn_style": "primary",
+            "use_modal": false,
+            "video_url": "",
+            "video_hosted": "",
+            "metafield_image": "",
+            "metafield_video": ""
+          }
+        },
+        "e8e3ff47-571b-4523-a4af-eeeb7c4c58f5": {
+          "type": "icon",
+          "settings": {
+            "hide_mobile": false,
+            "title": "<svg class=\"icon\" stroke=\"currentColor\"  width=\"37.09\" height=\"41.913\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 37.09 41.913\">\n  <g transform=\"translate(0.5 0.354)\">\n    <path d=\"M24.073,45.172,12.5,40.138V28.5l11.573,5.1Z\" transform=\"translate(-4.981 -10.324)\" fill=\"none\" stroke-linejoin=\"round\"></path>\n    <path d=\"M30.2,45.172l10.2-5.034V28.5L30.2,33.6Z\" transform=\"translate(-11.109 -10.324)\" fill=\"none\" stroke-linejoin=\"round\"></path>\n    <path d=\"M12.5,25.834,22.634,20.8l11.638,5.034\" transform=\"translate(-4.981 -7.658)\" fill=\"none\" stroke-linejoin=\"round\"></path>\n    <line x2=\"11.573\" y2=\"5.1\" transform=\"translate(12.619 15.626)\" fill=\"none\" stroke-linejoin=\"round\"></line>\n    <path d=\"M17.084,8.431,19.111,8.3A18.045,18.045,0,1,1,1,26.411\" transform=\"translate(-1 -3.331)\" fill=\"none\" stroke-linejoin=\"round\" stroke-miterlimit=\"10\"></path>\n    <path d=\"M29.734,10.7,24.7,5.734,29.734.7\" transform=\"translate(-9.205 -0.7)\" fill=\"none\" stroke-linejoin=\"round\" stroke-miterlimit=\"6\"></path>\n  </g>\n</svg>",
+            "subtitle": "Free Returns",
+            "text": "Free returns within 60 days",
+            "badge": "",
+            "button_text": "",
+            "url": "https://consuelastyle.com/pages/contact-us#shopify-section-template--14835121717302__166242411351fe5489",
+            "btn_style": "primary",
+            "use_modal": false,
+            "video_url": "",
+            "video_hosted": "",
+            "metafield_image": "",
+            "metafield_video": ""
+          }
+        },
+        "ea0153d9-78df-4c19-a363-41eeb8cf3d77": {
+          "type": "icon",
+          "settings": {
+            "hide_mobile": true,
+            "title": "<svg class=\"icon\" stroke=\"currentColor\"  width=\"45.167\" height=\"26.55\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 45.167 26.55\">\n  <g transform=\"translate(0.5 0.5)\">\n    <rect fill=\"none\" stroke-linejoin=\"round\" width=\"44.167\" height=\"25.55\" rx=\"3.653\"></rect>\n    <path fill=\"none\" d=\"M3.99,1.89h.826V.112a3.064,3.064,0,0,0,3.122-2.94c0-1.806-1.064-2.464-3.122-2.828v-3.5a1.962,1.962,0,0,1,1.82,1.778H7.728a2.925,2.925,0,0,0-2.912-2.73v-1.274H3.99v1.26a2.857,2.857,0,0,0-2.954,2.7c0,1.68,1.106,2.338,2.954,2.688V-.84A2.134,2.134,0,0,1,1.806-3.052H.63A3.219,3.219,0,0,0,3.99.112ZM6.776-2.744a1.993,1.993,0,0,1-1.96,1.9V-4.592C6.342-4.27,6.776-3.78,6.776-2.744ZM2.142-7.532c0-.868.672-1.54,1.848-1.638V-5.8C2.436-6.118,2.142-6.65,2.142-7.532Z\" transform=\"translate(17.281 17.62)\"></path>\n  </g>\n</svg>",
+            "subtitle": "Gift Cards",
+            "text": "Can’t decide? We’ve got you covered with a Consuela Gift Card.",
+            "badge": "",
+            "button_text": "",
+            "url": "https://consuelastyle.com/products/e-gift-card",
+            "btn_style": "primary",
+            "use_modal": false,
+            "video_url": "",
+            "video_hosted": "",
+            "metafield_image": "",
+            "metafield_video": ""
+          }
+        },
+        "5f47d20e-19b9-4834-bd7c-a95432b52424": {
+          "type": "icon",
+          "settings": {
+            "hide_mobile": true,
+            "title": "<svg class=\"icon\" stroke=\"currentColor\" width=\"23\" height=\"30.762\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 23 30.762\">\n  <g transform=\"translate(0.5 0.5)\">\n    <path fill=\"none\" stroke-linejoin=\"round\" stroke-miterlimit=\"6\" d=\"M969.317,198.893a11,11,0,0,0-22,0c0,5.589,2.844,7.5,11,18.426C966.459,206.409,969.317,204.488,969.317,198.893Zm-6.555.014a4.445,4.445,0,1,1-4.445-4.444A4.445,4.445,0,0,1,962.762,198.907Z\" transform=\"translate(-947.317 -187.893)\"></path>\n  </g>\n</svg>",
+            "subtitle": "Store Locator",
+            "text": "Find a store near you.",
+            "badge": "",
+            "button_text": "",
+            "url": "https://consuelastyle.com/pages/store-locator",
+            "btn_style": "primary",
+            "use_modal": false,
+            "video_url": "",
+            "video_hosted": "",
+            "metafield_image": "",
+            "metafield_video": ""
+          }
+        }
+      },
+      "block_order": [
+        "258c7656-1d92-4b9f-880e-6077a148e4ed",
+        "e8e3ff47-571b-4523-a4af-eeeb7c4c58f5",
+        "ea0153d9-78df-4c19-a363-41eeb8cf3d77",
+        "5f47d20e-19b9-4834-bd7c-a95432b52424"
+      ],
+      "custom_css": [
+        "@media (max-width: 749px) {.section--ctas .cell:not(.slick-initialized) {display: flex; flex-wrap: wrap; } .rte {font-size: 14px !important; } .inner-container span {display: block; } .inner-container span {font-size: 13px !important; } .cell__item {width: 49% !important; }}"
+      ],
+      "settings": {
+        "title": "",
+        "text": "",
+        "link_text": "",
+        "link_url": "",
+        "button_text": "",
+        "button_url": "",
+        "btn_style": "primary",
+        "text_color": "#ffffff",
+        "gradient": "linear-gradient(310deg, rgba(0, 0, 0, 1) 15%, rgba(0, 0, 0, 1) 85%)",
+        "per_row": 0,
+        "align_boxes_left": false,
+        "large_images": false,
+        "inline_ctas": false,
+        "match_row": false,
+        "use_slider": false,
+        "use_slider_mobile_only": false,
+        "use_offset": false,
+        "use_arrows": false,
+        "use_dots": false,
+        "auto_slide": false,
+        "infinite": true,
+        "custom_css": "== {\n  padding: var(--base-gutter) 0;\n}\n\n== svg {\n  // width: var(--base-gutter--double);\n  // height: var(--base-gutter);\n  width: 45px;\n  height: 45px;\n}\n\n== .inner-container {\n  margin: 0 auto;\n  max-width: 250px;\n}\n\n== h4 {\n  font-family: var(--font--graphik-wide);\n  font-weight: 700;\n}\n\n== h4, \n== .rte, \n== .rte * {\n  font-size: 12px;\n}\n\n== .inner-container {\n  transition: opacity .15s ease;\n  opacity: 1;\n}\n\n== .inner-container:hover {\n  opacity: 0.75;\n}\n\n/small/ {\n  == h3,\n  == h4 {\n    margin-bottom: calc(var(--base-gutter--quarter) / 2);\n  }\n}",
+        "metafield_background_image": "",
+        "metafield_video": ""
+      }
+    }
+  },
+  "order": [
+    "nine15_slider_aMwGjn",
+    "custom_slider_PL3MzF",
+    "video_zM7bNa",
+    "flexible_block_g74AXK",
+    "nine15_slider_gW8FGh",
+    "video_pKJpcB",
+    "nine15_custom_html_GCJVbW",
+    "nine15_slider_h7fQEL",
+    "nine15_slider_r3ycYz",
+    "review_section_jQC4TE",
+    "grid_image_iM6ipU",
+    "nine15_featured_testimonial_7XtYp3",
+    "16631863351757bf5f",
+    "16631863389293437d"
+  ]
+}

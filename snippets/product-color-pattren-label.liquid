@@ -1,0 +1,11 @@
+{{ 'colo-pattrens.css' | asset_url | stylesheet_tag }}
+
+{%  assign colorPattrenObject = product.metafields.custom.product_color_pattren.value %}
+<div class="color-pattren__labels-wrapper">
+    {% for color in colorPattrenObject %}
+        <p class="color-pattren__label heading">
+            <strong>pattern:</strong>
+            <span>{{ color.color_name }}</span>
+        </p>
+    {% endfor %}
+</div>

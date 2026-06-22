@@ -1,0 +1,421 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 30,
+        "padding_bottom": 30,
+        "title_style": "styled",
+        "loop": "",
+        "custom_css": "== .section--title h1 {\n  padding-top: var(--base-gutter);\n}\n\n== .page-width {\n  max-width: 1400px;\n}\n\n/medium-up/ {\n  == .section--title h1 {\n    padding-top: var(--base-gutter--double);\n  }\n}\n\n/large-up/ {\n  == .section--title h1 {\n    padding-top: var(--base-gutter--trip);\n  }\n}",
+        "custom_code": ""
+      }
+    },
+    "nine15_slider_7beiRB": {
+      "type": "nine15--slider",
+      "blocks": {
+        "slider_rnc4Wa": {
+          "type": "slider",
+          "settings": {
+            "image": "shopify://shop_images/GiftGuide_desktop_VDay_01.jpg",
+            "image_mob": "shopify://shop_images/GiftGuide_mobile_VDay_01.jpg",
+            "no_lazyload": false,
+            "title": "",
+            "subtitle": "",
+            "text": "",
+            "btn_txt": "",
+            "btn_url": "shopify://collections/valentines-gift-guide-bags",
+            "btn_anchor_url": "",
+            "force_slide_link": true,
+            "stars": "",
+            "align_bg": "center",
+            "bg_color": "#000000",
+            "opacity": 0,
+            "align_text": "left",
+            "vert_align": 50,
+            "hor_align": 10,
+            "width": "450px",
+            "title_color": "#000000",
+            "font_size_title": 60,
+            "subtitle_color": "#000000",
+            "font_size_subtitle": 20,
+            "text_color": "#333333",
+            "font_size_text": 16,
+            "btn_style": "primary",
+            "color_button_text": "",
+            "color_button": "",
+            "color_button_border": "",
+            "color_button_text_hover": "",
+            "color_button_hover": "",
+            "color_button_border_hover": "",
+            "align_bg_mob": "inherit",
+            "bg_color_mob": "",
+            "opacity_mob": 0,
+            "align_text_mob": "inherit",
+            "vert_align_mob": 50,
+            "hor_align_mob": 50,
+            "width_mob": "",
+            "title_color_mob": "",
+            "font_size_title_mob": 32,
+            "subtitle_color_mob": "",
+            "font_size_subtitle_mob": 18,
+            "text_color_mob": "",
+            "font_size_text_mob": 16,
+            "btn_style_mob": "inherit",
+            "color_button_text_mob": "",
+            "color_button_mob": "",
+            "color_button_border_mob": "",
+            "color_button_text_hover_mob": "",
+            "color_button_hover_mob": "",
+            "color_button_border_hover_mob": "",
+            "video_ratio": "56",
+            "video_url": "",
+            "video_hosted": "",
+            "btn_txt_modal": "Watch Video",
+            "video_modal": "",
+            "custom_css": ""
+          }
+        }
+      },
+      "block_order": [
+        "slider_rnc4Wa"
+      ],
+      "name": "Slider - NINE15",
+      "settings": {
+        "set_height": false,
+        "mob_rel": false,
+        "show_mobile_overlay_sooner": false,
+        "image_height": "clamp(500px,54%,100vh)",
+        "image_height_mob": "",
+        "auto_slide": true,
+        "fade": false,
+        "pause": "5000",
+        "custom_css": ""
+      }
+    },
+    "flexible_block_ADQeXB": {
+      "type": "flexible-block",
+      "blocks": {
+        "image_block_maJGeA": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/GiftGuide_desktop_VDay_02.jpg",
+            "mobile": "shopify://shop_images/GiftGuide_desktop_VDay_02.jpg",
+            "link": "shopify://collections/valentines-gift-guide-bags"
+          }
+        },
+        "image_block_6rLEgP": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/GiftGuide_desktop_VDay_03.jpg",
+            "mobile": "shopify://shop_images/GiftGuide_desktop_VDay_03.jpg",
+            "link": "shopify://collections/valentines-day-gift-guide-accessories"
+          }
+        },
+        "image_block_y9edVC": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/GiftGuide_desktop_VDay_04.jpg",
+            "mobile": "shopify://shop_images/GiftGuide_desktop_VDay_04.jpg",
+            "link": "shopify://collections/valentines-day-gift-guide-jewelry"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_maJGeA",
+        "image_block_6rLEgP",
+        "image_block_y9edVC"
+      ],
+      "name": "Flexible Image Blocks (3)",
+      "settings": {
+        "block_gap": 20
+      }
+    },
+    "nine15_slider_adBKq9": {
+      "type": "nine15--slider",
+      "blocks": {
+        "slider_T7WPzF": {
+          "type": "slider",
+          "settings": {
+            "image": "shopify://shop_images/GiftGuide_desktop_VDay_05.jpg",
+            "image_mob": "shopify://shop_images/GiftGuide_mobile_VDay_04.jpg",
+            "no_lazyload": false,
+            "title": "",
+            "subtitle": "",
+            "text": "",
+            "btn_txt": "",
+            "btn_url": "shopify://collections/new",
+            "btn_anchor_url": "",
+            "force_slide_link": true,
+            "stars": "",
+            "align_bg": "center",
+            "bg_color": "#000000",
+            "opacity": 0,
+            "align_text": "left",
+            "vert_align": 50,
+            "hor_align": 10,
+            "width": "450px",
+            "title_color": "#000000",
+            "font_size_title": 60,
+            "subtitle_color": "#000000",
+            "font_size_subtitle": 20,
+            "text_color": "#333333",
+            "font_size_text": 16,
+            "btn_style": "primary",
+            "color_button_text": "",
+            "color_button": "",
+            "color_button_border": "",
+            "color_button_text_hover": "",
+            "color_button_hover": "",
+            "color_button_border_hover": "",
+            "align_bg_mob": "inherit",
+            "bg_color_mob": "",
+            "opacity_mob": 0,
+            "align_text_mob": "inherit",
+            "vert_align_mob": 50,
+            "hor_align_mob": 50,
+            "width_mob": "",
+            "title_color_mob": "",
+            "font_size_title_mob": 32,
+            "subtitle_color_mob": "",
+            "font_size_subtitle_mob": 18,
+            "text_color_mob": "",
+            "font_size_text_mob": 16,
+            "btn_style_mob": "inherit",
+            "color_button_text_mob": "",
+            "color_button_mob": "",
+            "color_button_border_mob": "",
+            "color_button_text_hover_mob": "",
+            "color_button_hover_mob": "",
+            "color_button_border_hover_mob": "",
+            "video_ratio": "56",
+            "video_url": "",
+            "video_hosted": "",
+            "btn_txt_modal": "Watch Video",
+            "video_modal": "",
+            "custom_css": ""
+          }
+        }
+      },
+      "block_order": [
+        "slider_T7WPzF"
+      ],
+      "name": "Slider - NINE15",
+      "settings": {
+        "set_height": false,
+        "mob_rel": false,
+        "show_mobile_overlay_sooner": false,
+        "image_height": "clamp(500px,54%,100vh)",
+        "image_height_mob": "",
+        "auto_slide": true,
+        "fade": false,
+        "pause": "5000",
+        "custom_css": ""
+      }
+    },
+    "custom_slider_WPjkYL": {
+      "type": "custom-slider",
+      "name": "Custom Slider",
+      "settings": {
+        "source_type": "collection",
+        "collection": "the-new-arrivals-collection",
+        "slider_title": "Featured Products",
+        "show_title": false
+      }
+    },
+    "nine15_slider_BQByiG": {
+      "type": "nine15--slider",
+      "blocks": {
+        "slider_KGbAC8": {
+          "type": "slider",
+          "settings": {
+            "image": "shopify://shop_images/GiftGuide_desktop_VDay_06.jpg",
+            "image_mob": "shopify://shop_images/GiftGuide_mobile_VDay_06.jpg",
+            "no_lazyload": false,
+            "title": "",
+            "subtitle": "",
+            "text": "",
+            "btn_txt": "",
+            "btn_url": "shopify://collections/bag-bestsellers",
+            "btn_anchor_url": "",
+            "force_slide_link": false,
+            "stars": "",
+            "align_bg": "center",
+            "bg_color": "#000000",
+            "opacity": 0,
+            "align_text": "left",
+            "vert_align": 50,
+            "hor_align": 10,
+            "width": "450px",
+            "title_color": "#000000",
+            "font_size_title": 60,
+            "subtitle_color": "#000000",
+            "font_size_subtitle": 20,
+            "text_color": "#333333",
+            "font_size_text": 16,
+            "btn_style": "primary",
+            "color_button_text": "",
+            "color_button": "",
+            "color_button_border": "",
+            "color_button_text_hover": "",
+            "color_button_hover": "",
+            "color_button_border_hover": "",
+            "align_bg_mob": "inherit",
+            "bg_color_mob": "",
+            "opacity_mob": 0,
+            "align_text_mob": "inherit",
+            "vert_align_mob": 50,
+            "hor_align_mob": 50,
+            "width_mob": "",
+            "title_color_mob": "",
+            "font_size_title_mob": 32,
+            "subtitle_color_mob": "",
+            "font_size_subtitle_mob": 18,
+            "text_color_mob": "",
+            "font_size_text_mob": 16,
+            "btn_style_mob": "inherit",
+            "color_button_text_mob": "",
+            "color_button_mob": "",
+            "color_button_border_mob": "",
+            "color_button_text_hover_mob": "",
+            "color_button_hover_mob": "",
+            "color_button_border_hover_mob": "",
+            "video_ratio": "56",
+            "video_url": "",
+            "video_hosted": "",
+            "btn_txt_modal": "Watch Video",
+            "video_modal": "",
+            "custom_css": ""
+          }
+        }
+      },
+      "block_order": [
+        "slider_KGbAC8"
+      ],
+      "name": "Slider - NINE15",
+      "settings": {
+        "set_height": false,
+        "mob_rel": false,
+        "show_mobile_overlay_sooner": false,
+        "image_height": "clamp(500px,54%,100vh)",
+        "image_height_mob": "",
+        "auto_slide": true,
+        "fade": false,
+        "pause": "5000",
+        "custom_css": ""
+      }
+    },
+    "grid_image_Pzxeei": {
+      "type": "grid-image",
+      "blocks": {
+        "style_block_ffaHpp": {
+          "type": "style_block",
+          "settings": {
+            "image": "shopify://shop_images/Section6_GiftGuide_desktop_dd8f3d16-204f-4ebc-ba9b-3e4f899b68a3.jpg",
+            "subhead": "tote bags",
+            "link": "shopify://collections/totes"
+          }
+        },
+        "style_block_VABAtV": {
+          "type": "style_block",
+          "settings": {
+            "image": "shopify://shop_images/Section7_GiftGuide_desktop_b1ce2f2b-2ecb-424f-86f6-7b8cb1aecd7d.jpg",
+            "subhead": "Crossbody Bags",
+            "link": "shopify://collections/crossbodies"
+          }
+        },
+        "style_block_KEbiyV": {
+          "type": "style_block",
+          "settings": {
+            "image": "shopify://shop_images/Section8GiftGuide_desktop_75bb8347-c78c-433c-a2df-7fab3c6c894b.jpg",
+            "subhead": "Jewelry",
+            "link": "shopify://collections/the-jewelry-collection"
+          }
+        },
+        "style_block_44RhV3": {
+          "type": "style_block",
+          "settings": {
+            "image": "shopify://shop_images/Section9_GiftGuide_desktop_cf4cd58e-a233-44ff-baa7-672589c9430d.jpg",
+            "subhead": "Grab N Go Bags",
+            "link": "shopify://collections/grab-n-go"
+          }
+        },
+        "style_block_KB3UgE": {
+          "type": "style_block",
+          "settings": {
+            "image": "shopify://shop_images/Section10_GiftGuide_desktop_0af6465a-f30a-4529-ab9b-28003c002600.jpg",
+            "subhead": "travel bags",
+            "link": "shopify://collections/travel-bags"
+          }
+        },
+        "style_block_9PMbyx": {
+          "type": "style_block",
+          "settings": {
+            "image": "shopify://shop_images/Section11_GiftGuide_desktop_10c62fb1-1777-41f6-a609-f3699b659cfd.jpg",
+            "subhead": "Accessories",
+            "link": "shopify://collections/accessories"
+          }
+        },
+        "style_block_ezJibp": {
+          "type": "style_block",
+          "settings": {
+            "image": "shopify://shop_images/Section12_GiftGuide_desktop_655554ed-174b-4b75-a02b-6437f6e383c4.jpg",
+            "subhead": "Cosmetic Cases",
+            "link": "shopify://collections/cosmetic-cases"
+          }
+        },
+        "style_block_8faVxf": {
+          "type": "style_block",
+          "settings": {
+            "image": "shopify://shop_images/Section13_GiftGuide_desktop_79d633cb-b67e-4a28-a759-cd078a6d1bb5.jpg",
+            "subhead": "Wallets",
+            "link": "shopify://collections/wallets"
+          }
+        }
+      },
+      "block_order": [
+        "style_block_ffaHpp",
+        "style_block_VABAtV",
+        "style_block_KEbiyV",
+        "style_block_44RhV3",
+        "style_block_KB3UgE",
+        "style_block_9PMbyx",
+        "style_block_ezJibp",
+        "style_block_8faVxf"
+      ],
+      "disabled": true,
+      "name": "Shop Top Styles (8)",
+      "settings": {
+        "main_title": "Shop Top Styles"
+      }
+    },
+    "image_button_xkQqmc": {
+      "type": "image-button",
+      "disabled": true,
+      "name": "Two Image Banner",
+      "settings": {
+        "main_title": "Our Featured Styles"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "nine15_slider_7beiRB",
+    "flexible_block_ADQeXB",
+    "nine15_slider_adBKq9",
+    "custom_slider_WPjkYL",
+    "nine15_slider_BQByiG",
+    "grid_image_Pzxeei",
+    "image_button_xkQqmc"
+  ]
+}

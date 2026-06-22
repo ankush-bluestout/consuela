@@ -1,0 +1,156 @@
+{% schema %}
+{
+  "name": "Shoppable Section",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Shoppable Section"
+    }
+  ]
+}
+{% endschema %}
+
+<style>
+    .shoppable-section .rebuy-product-actions {
+      display: none;
+    }
+
+    .shoppable-section .rebuy-widget .rebuy-product-block .rebuy-product-info {
+      justify-content: center !important;
+      flex-direction: column;
+      align-items: center;
+      gap: 2px;
+      margin-top: -30px;
+      padding: 0px 0px 10px 0px !important;
+      border-bottom: 0.8px solid rgba(217, 217, 217, 0.50);
+    }
+
+    .shoppable-section .rebuy-widget .rebuy-product-block .rebuy-product-info .rebuy-product-title {
+      max-width: 100% !important;
+    }
+
+    .shoppable-section .rebuy-widget.rebuy-widget {
+      padding: 0px !important;
+    }
+
+    .shoppable-section .rebuy-widget .rebuy-product-block .rebuy-product-info .rebuy-product-title {
+      color: #000 !important;
+      font-size: 12px;
+      font-family: var(--font--graphik);
+      font-style: normal;
+      font-weight: 500 !important;
+      margin: 0px !important;
+    }
+
+    .shoppable-section .rebuy-money {
+      color: #000 !important;
+      font-family: var(--font--graphik);
+      font-size: 12px !important;
+      font-style: normal;
+      font-weight: 400 !important;
+    }
+
+    .shoppable-section .rebuy-product-info {
+      line-height: normal !important;
+    }
+
+    .shoppable-section .rebuy-widget .rebuy-product-block .rebuy-product-info .rebuy-product-price {
+      margin: 0px !important;
+
+    }
+
+    .shoppable-section .rebuy-widget .rebuy-product-grid.small-columns-2 .rebuy-product-block {
+      padding-right: 0px !important;
+      border-right: 0.8px solid rgba(217, 217, 217, 0.50);
+    }
+
+
+    .shoppable-section .rebuy-money span {
+      font-size: 12px !important;
+    }
+
+    .shoppable-section .rebuy-widget .flickity-button.next,
+    .shoppable-section .rebuy-widget .flickity-button.previous {
+      border: none !important;
+    }
+
+    .shoppable-section .rebuy-widget .rebuy-product-block .rebuy-product-media img {
+     height: 343px !important;
+    }
+
+    @media (max-width: 1110px) {
+      .shoppable-section .rebuy-widget .rebuy-product-block .rebuy-product-media img {
+        height: 272px !important
+      }
+    }
+
+
+    @media (max-width: 1024px) {
+      .shoppable-section .rebuy-product-image.clickable {
+        height: unset !important;
+      }
+    }
+
+    @media (min-width: 990px) {
+      .shoppable-section .rebuy-widget .flickity-button.previous {
+        left: 0px !important;
+      }
+
+      .shoppable-section .rebuy-widget .flickity-button.next {
+        right: 0px !important;
+      }
+
+    }
+
+    @media (max-width: 905px) {
+      .shoppable-section .rebuy-widget .rebuy-product-block .rebuy-product-media img {
+        height : 225px !important;
+      }
+
+      .shoppable-section .rebuy-widget .rebuy-product-block .rebuy-product-info {
+        margin-top: -20px !important;
+      }
+
+      .rebuy-widget .flickity-enabled.is-draggable {
+      padding-bottom: 10px !important
+    }
+
+    }
+
+    @media (max-width: 850px){
+      .shoppable-section .rebuy-widget .rebuy-product-block .rebuy-product-info .rebuy-product-title{
+        font-size: 11px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .shoppable-section .rebuy-widget .rebuy-product-block .rebuy-product-info .rebuy-product-title.clickable {
+        padding-top: 10px;
+      }
+
+      .shoppable-section .rebuy-widget .flickity-enabled.is-draggable {
+        border-bottom: 0.8px solid rgba(217, 217, 217, 0.50);
+        padding-bottom: 5px !important;
+      }
+
+      .shoppable-section .rebuy-widget .rebuy-product-block .rebuy-product-info {
+        border-bottom: none !important;
+        margin-top: -20px !important;
+        padding: 0px !important;
+      }
+
+    }
+
+    @media (max-width: 767px) {
+      .shoppable-section .rebuy-widget .rebuy-product-block .rebuy-product-info .rebuy-product-title {
+        font-size: 12px !important;
+        font-weight: 500 !important;
+      }
+    }
+
+    
+</style>
+
+<section>
+  <div data-rebuy-id="233312" data-rebuy-shopify-product-ids="{{ product.id }}" class="shoppable-section"></div>
+</section>

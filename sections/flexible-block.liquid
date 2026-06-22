@@ -1,0 +1,151 @@
+<section class="flexible-image-blocks" style="--block-gap: {{ section.settings.block_gap }}px;">
+  <div class="image-blocks-wrapper">
+    {% for block in section.blocks %}
+      {% assign mobileimg = block.settings.mobile %}
+      <div class="image-block" id="block-{{ block.id }}">
+        {% if block.settings.link != blank %}
+          <a href="{{ block.settings.link }}" class="image-link">
+        {% endif %}
+        {% if block.settings.image != blank %}
+          <img
+            src="{{ block.settings.image | img_url: 'master' }}"
+            alt="Image Block"
+            class="image-fluid desktop"
+            loading="lazy"
+            width=""
+            height=""
+          >
+          {% else %}
+            {{ 'image' | placeholder_svg_tag }}
+          {% endif %}
+          {% if mobileimg != blank %}
+            <img
+              src="{{ mobileimg | img_url: 'master' }}"
+              alt="Image Block"
+              class="image-fluid mobile"
+              loading="lazy"
+              width=""
+              height=""
+            >
+          {% endif %}
+        {% if block.settings.link != blank %}
+          </a>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+<style>
+  .flexible-image-blocks {
+    display: block;
+    margin: 50px;
+  }
+
+  .image-blocks-wrapper {
+    display: grid;
+    justify-content: center;
+    gap: 40px;
+    margin: auto;
+    grid-template-columns: repeat(3,1fr);
+  }
+
+  .image-block {
+    flex: 1 1 calc(33.333% - var(--block-gap));
+  }
+
+  .image-link {
+    display: inline-block;
+    width: 100%;
+  }
+
+  .image-fluid {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .mobile {
+    display: none;
+  }
+
+  @media (max-width: 1024px) {
+    .shop-top-styles {
+      margin-bottom: 30px !important;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .image-blocks-wrapper {
+      display: grid;
+      gap: 22px !important;
+      grid-template-columns : auto;
+    }
+
+    .flexible-image-blocks {
+      margin: 22px 20px !important;
+    }
+
+    .shop-top-styles {
+      padding: 0px 20px !important;
+    }
+  }
+
+  @media (max-width: 425px) {
+    .mobile {
+      display: block;
+    }
+
+    .desktop {
+      display: none;
+    }
+  }
+
+</style>
+
+{% schema %}
+{
+  "name": "Flexible Image Blocks (3)",
+  "settings": [
+    {
+      "type": "range",
+      "id": "block_gap",
+      "label": "Gap between images (px)",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 20
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image_block",
+      "name": "Image Block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Desktop"
+        },
+        {
+          "type": "image_picker",
+          "id": "mobile",
+          "label": "Mobile"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link URL"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 3,
+  "presets": [
+    {
+      "name": "Flexible Image Blocks (3)",
+      "category": "Image"
+    }
+  ]
+}
+{% endschema %}

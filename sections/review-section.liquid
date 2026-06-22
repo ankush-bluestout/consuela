@@ -1,0 +1,797 @@
+{% schema %}
+{
+  "name": "Scrolling Reviews",
+  "settings": [
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "OVER 25,000 FIVE STAR REVIEWS"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "WHAT PEOPLE ARE SAYING"
+    },
+    {
+      "type": "checkbox",
+      "id": "auto_scroll",
+      "label": "Enable Auto Scroll",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "scroll_speed",
+      "label": "Auto Scroll Speed (seconds)",
+      "min": 3,
+      "max": 10,
+      "step": 1,
+      "default": 5
+    }
+  ],
+  "blocks": [
+    {
+      "type": "review",
+      "name": "Review",
+      "settings": [
+        { "type": "image_picker", "id": "product_image", "label": "Product Image" },
+        { "type": "url", "id": "image_link", "label": "Image Link" },
+        { "type": "text", "id": "product_title", "label": "Product Title" },
+        { "type": "range", "id": "stars", "label": "Stars", "min": 1, "max": 5, "step": 1, "default": 5 },
+        { "type": "text", "id": "price", "label": "Price" },
+        { "type": "textarea", "id": "quote", "label": "Quote / Description" },
+        { "type": "text", "id": "name", "label": "Reviewer Name" },
+        { "type": "text", "id": "position", "label": "Reviewer Position / Location" },
+        { "type": "text", "id": "button_label", "label": "Button Label", "default": "SHOP NOW" },
+        { "type": "url", "id": "button_link", "label": "Button Link" }
+      ]
+    }
+  ],
+  "presets": [{ "name": "Scrolling Reviews" }]
+}
+{% endschema %}
+
+<section class="reviews-section page-width">
+  <div class="reviews-header">
+    <div>
+      <h2 class="subtitle">
+        {{ section.settings.subtitle }}
+        <span>{{ section.settings.title }}</span>
+      </h2>
+    </div>
+    <div style="margin-right: 37px;" class="btn_group">
+      <img src="{{ 'btn.svg' | asset_url }}" alt="Button Icon" width="" height="" class="pause_btn">
+      <img src="{{ 'button-play.svg' | asset_url }}" alt="Button Icon" width="" height="" class="play_btn">
+    </div>
+  </div>
+
+  <div class="reviews-slider-wrapper">
+    <div class="btn_groups">
+      <button class="arrow prev">
+        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="28" viewBox="0 0 17 28" fill="none">
+          <g clip-path="url(#clip0_5018_303)">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M15.1697 1.8086C15.3016 1.93865 15.4063 2.09314 15.4777 2.26322C15.5491 2.43331 15.5859 2.61565 15.5859 2.7998C15.5859 2.98394 15.5491 3.16628 15.4777 3.33637C15.4063 3.50646 15.3016 3.66095 15.1697 3.791L4.83651 13.9998L15.1697 24.2086C15.4357 24.4715 15.5851 24.828 15.5851 25.1998C15.5851 25.5716 15.4357 25.9281 15.1697 26.191C14.9037 26.4539 14.5429 26.6016 14.1667 26.6016C13.7905 26.6016 13.4297 26.4539 13.1637 26.191L1.83034 14.991C1.69842 14.8609 1.59374 14.7065 1.52233 14.5364C1.45091 14.3663 1.41415 14.1839 1.41415 13.9998C1.41415 13.8156 1.45091 13.6333 1.52233 13.4632C1.59374 13.2931 1.69842 13.1386 1.83034 13.0086L13.1637 1.8086C13.2953 1.67822 13.4516 1.57478 13.6237 1.5042C13.7958 1.43362 13.9803 1.39729 14.1667 1.39729C14.353 1.39729 14.5375 1.43362 14.7096 1.5042C14.8818 1.57478 15.0381 1.67822 15.1697 1.8086Z" fill="black"/>
+          </g>
+          <defs>
+            <clipPath id="clip0_5018_303">
+              <rect width="28" height="17" fill="white" transform="matrix(4.37114e-08 -1 -1 -4.37114e-08 17 28)"/>
+            </clipPath>
+          </defs>
+        </svg>
+        <svg
+          class="mobile_svg"
+          xmlns="http://www.w3.org/2000/svg"
+          width="12"
+          height="20"
+          viewBox="0 0 12 20"
+          fill="none"
+        >
+          <g clip-path="url(#clip0_5018_705)">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M10.4107 17.9738C10.5012 17.8845 10.573 17.7785 10.622 17.6618C10.6711 17.545 10.6963 17.4199 10.6963 17.2935C10.6963 17.1672 10.6711 17.042 10.622 16.9253C10.573 16.8086 10.5012 16.7025 10.4107 16.6133L3.31927 9.60726L10.4107 2.60122C10.5932 2.42081 10.6958 2.17612 10.6958 1.92098C10.6958 1.66585 10.5932 1.42116 10.4107 1.24075C10.2281 1.06034 9.9805 0.958985 9.72233 0.958985C9.46415 0.958985 9.21655 1.06034 9.034 1.24075L1.25622 8.92702C1.16568 9.01627 1.09384 9.12229 1.04483 9.23902C0.995817 9.35575 0.970589 9.48088 0.970589 9.60726C0.970589 9.73363 0.995817 9.85877 1.04483 9.9755C1.09384 10.0922 1.16568 10.1982 1.25622 10.2875L9.03399 17.9738C9.12431 18.0632 9.23159 18.1342 9.34971 18.1827C9.46782 18.2311 9.59445 18.256 9.72233 18.256C9.85021 18.256 9.97683 18.2311 10.0949 18.1827C10.2131 18.1342 10.3204 18.0632 10.4107 17.9738Z" fill="black"/>
+          </g>
+          <defs>
+            <clipPath id="clip0_5018_705">
+              <rect width="19.2157" height="11.6667" fill="white" transform="translate(11.6667) rotate(90)"/>
+            </clipPath>
+          </defs>
+        </svg>
+      </button>
+      <button class="arrow next">
+        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="28" viewBox="0 0 17 28" fill="none">
+          <g clip-path="url(#clip0_5018_314)">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M1.83038 1.8086C1.69845 1.93864 1.59378 2.09314 1.52236 2.26322C1.45095 2.43331 1.41418 2.61565 1.41418 2.7998C1.41418 2.98394 1.45095 3.16628 1.52236 3.33637C1.59378 3.50646 1.69845 3.66095 1.83038 3.791L12.1636 13.9998L1.83038 24.2086C1.56437 24.4715 1.41493 24.828 1.41493 25.1998C1.41493 25.5716 1.56437 25.9281 1.83038 26.191C2.0964 26.4539 2.45719 26.6016 2.83339 26.6016C3.20958 26.6016 3.57037 26.4539 3.83639 26.191L15.1697 14.991C15.3016 14.8609 15.4063 14.7065 15.4777 14.5364C15.5492 14.3663 15.5859 14.1839 15.5859 13.9998C15.5859 13.8156 15.5492 13.6333 15.4777 13.4632C15.4063 13.2931 15.3016 13.1386 15.1697 13.0086L3.83638 1.8086C3.70479 1.67822 3.54846 1.57478 3.37635 1.5042C3.20423 1.43362 3.01972 1.39729 2.83338 1.39729C2.64704 1.39729 2.46253 1.43362 2.29042 1.5042C2.11831 1.57478 1.96198 1.67822 1.83038 1.8086Z" fill="black"/>
+          </g>
+          <defs>
+            <clipPath id="clip0_5018_314">
+              <rect width="28" height="17" fill="white" transform="translate(1.22392e-06 28) rotate(-90)"/>
+            </clipPath>
+          </defs>
+        </svg>
+        <svg
+          class="mobile_svg"
+          xmlns="http://www.w3.org/2000/svg"
+          width="12"
+          height="20"
+          viewBox="0 0 12 20"
+          fill="none"
+        >
+          <g clip-path="url(#clip0_5018_694)">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M1.25609 1.24192C1.16555 1.33117 1.09371 1.43719 1.0447 1.55392C0.995688 1.67065 0.970459 1.79578 0.970459 1.92216C0.970459 2.04853 0.995688 2.17367 1.0447 2.29039C1.09371 2.40712 1.16555 2.51314 1.25609 2.60239L8.34748 9.60843L1.25609 16.6145C1.07353 16.7949 0.97097 17.0396 0.97097 17.2947C0.97097 17.5498 1.07353 17.7945 1.25609 17.9749C1.43864 18.1553 1.68625 18.2567 1.94442 18.2567C2.2026 18.2567 2.4502 18.1553 2.63275 17.9749L10.4105 10.2887C10.5011 10.1994 10.5729 10.0934 10.6219 9.97667C10.6709 9.85994 10.6962 9.73481 10.6962 9.60843C10.6962 9.48205 10.6709 9.35692 10.6219 9.24019C10.5729 9.12347 10.5011 9.01744 10.4105 8.92819L2.63275 1.24192C2.54244 1.15245 2.43516 1.08146 2.31704 1.03302C2.19892 0.984585 2.0723 0.959654 1.94442 0.959654C1.81654 0.959654 1.68991 0.984585 1.5718 1.03302C1.45368 1.08146 1.3464 1.15245 1.25609 1.24192Z" fill="black"/>
+          </g>
+          <defs>
+            <clipPath id="clip0_5018_694">
+              <rect width="19.2157" height="11.6667" fill="white" transform="translate(8.39944e-07 19.2157) rotate(-90)"/>
+            </clipPath>
+          </defs>
+        </svg>
+      </button>
+    </div>
+    <div class="reviews-slider-viewport">
+      <div class="reviews-slider">
+        {% for block in section.blocks %}
+          <div class="review-slide" {{ block.shopify_attributes }}>
+            <div class="review-left">
+              {% if block.settings.product_image != blank %}
+                <a href="{{ block.settings.image_link | default: '#' }}">
+                  <img
+                    src="{{ block.settings.product_image | image_url: width: 900 }}"
+                    alt="{{ block.settings.product_title }}"
+                    loading="lazy"
+                    width=""
+                    height=""
+                  >
+                </a>
+              {% endif %}
+            </div>
+
+            <div class="review-right">
+              <div class="review-top">
+                <div class="review_top_one">
+                  <a href="{{ block.settings.button_link | default: '#' }}" class="btns">
+                    <h3>{{ block.settings.product_title }}</h3>
+                  </a>
+                  {% if block.settings.price != blank %}
+                    <h4>{{ block.settings.price }}</h4>
+                  {% endif %}
+                  <div class="stars">
+                    {% for i in (1..block.settings.stars) %}
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                        <path d="M9.98493 2.67578L11.7919 8.52864H17.6389L12.9078 12.1472L14.7148 18.0001L9.98493 14.3828L5.25382 18.0001L7.06083 12.1472L2.33093 8.52864H8.17792L9.98493 2.67578Z" fill="black" stroke="black" stroke-width="1.57878"/>
+                      </svg>
+                    {% endfor %}
+                  </div>
+                </div>
+              </div>
+              <a href="{{ block.settings.button_link | default: '#' }}" class="btns">
+                <div class="review-text">"
+                  {{ block.settings.quote }}"
+                  <span class="review-name">
+                    {{ block.settings.name }}
+                  </span>
+                </div>
+              </a>
+              {% if block.settings.name != blank %}
+              {% endif %}
+              <div class="review-bottom">
+                <a href="{{ block.settings.button_link | default: '#' }}" class="shop-btn">
+                  {{ block.settings.button_label }}
+                </a>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .reviews-section {
+    padding: 60px 13px;
+    max-width: 100% !important;
+  }
+
+  .review_top_one {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+
+
+  .review_top_one h4{
+    margin-left: 84px;
+  }
+
+  .reviews-header {
+    margin-bottom: 0px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .reviews-header img {
+    cursor: pointer;
+  }
+
+  .subtitle {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #000;
+    text-transform: uppercase;
+    margin: 0px 30px;
+    font-family: var(--font--graphik-wide);
+  }
+
+  .subtitle span {
+    display: block;
+    font-size: 96px;
+    font-family: var(--font--graphik-cond);
+    line-height: 1;
+  }
+
+  .reviews-slider-wrapper {
+    margin: 0px 30px;
+    display: flex;
+    align-items: center;
+  }
+
+  .reviews-slider-viewport {
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .reviews-slider {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+
+  .review-slide {
+    flex: 0 0 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .review-left img {
+    display: block;
+    margin-left: 60px;
+    max-width: 420px;
+  }
+
+  .review-right {
+    flex: 1;
+  }
+
+  .review-top {
+    display: flex;
+    gap: 84px;
+  }
+
+  .review-top h3,h4 {
+    font-family: var(--font--graphik-wide);
+    font-size: 15px;
+    font-weight: 700;
+    color: #000;
+    text-align: center;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 0px;
+    margin-bottom: 9px;
+  }
+
+  .review-top h4 {
+    font-size: 16px;
+  }
+
+  .review-text {
+    margin: 33px 0 52px 0px;
+    font-size: 28px;
+    font-weight: 500;
+    max-width: 97%;
+  }
+
+
+  .review-bottom {
+    display: flex;
+    align-items: center;
+    font-family: var(--font--graphik-wide);
+    gap: 89%;
+  }
+
+  .shop-btn {
+    padding: 16px 24px;
+    background: #000;
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  .btns {
+    text-decoration: none;
+  }
+
+  .arrow {
+    transform: translateY(-50%);
+    background: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 11px 16px 12px 18px;
+    position: absolute;
+    border-radius: 50px;
+    box-shadow: 0 0 4px rgba(0,0,0,0.1);
+    z-index: 2;
+  }
+
+  .mobile_svg {
+    display: none;
+  }
+
+  .prev { left: 40px; }
+  .next { right: 40px; }
+
+  .btn_groups {
+    margin-top: 85px;
+  }
+
+  .review_top_one h4 {
+    display: none !important;
+  }
+
+  @media (min-width: 768px) {
+    .review-right {
+      padding-left: 20px !important;
+    }
+  }
+
+  @media (max-width: 860px) {
+    .btn_groups {
+      margin-top: -350px;
+    }
+  }
+ 
+  @media (max-width: 425px) {
+
+    .prev {
+      left: 20px;
+    }
+
+    .next {
+      right: 20px;
+    }
+  }
+
+  .play_btn {
+    display: none;
+  }
+
+  .play_btn.clicked {
+    display: flex;
+  }
+
+  @media (max-width: 425px) {
+  .play_btn.clicked {
+    display: none !important;
+  }
+  }
+
+  .pause_btn.clicked {
+    display: none
+  }
+
+  @media (max-width: 1024px) {
+    .review-slide {
+      flex-direction: column;
+      text-align: center;
+    }
+
+      .review_top_one {
+      grid-template-columns: auto;
+      margin: auto;
+      max-width: 99%;
+    }
+
+    .review_top_one h4{
+    margin-left: 0px;
+    }
+
+    .review-text {
+      margin: auto;
+      margin-top: 33px;
+      margin-bottom: 52px;
+    }
+
+    .review-bottom {
+      max-width: 90%;
+      margin: auto;
+      justify-content: center;
+    }
+  }
+
+  @media (max-width: 3840px) {
+  .review-bottom {
+    gap: 75%;
+  }
+  }
+
+  @media (max-width: 2560px) {
+   .review-text  {
+      max-width : 80%;
+    }
+  }
+
+  @media (max-width: 1920px) {
+    .review-bottom {
+      gap: 77%;
+    }
+
+    .review-text {
+      max-width: 93%;
+    }
+  }
+
+  @media (max-width: 1920px) {
+    .review-bottom {
+          max-width: 98%;
+      gap: 64%;
+    }
+  }
+
+  @media (max-width: 1280px) {
+    .review-bottom {
+      gap: 350px;
+    }
+  }
+  @media (max-width: 820px) {
+    .review-bottom {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .btn_group {
+      display: none;
+    }
+
+    .review-left img {
+      margin-left: 0px;
+    }
+
+    .review-text {
+      font-size: 20px;
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+
+    .subtitle span {
+    font-size: 11.8vw;
+   }
+
+   .reviews-header img {
+     display: none;
+   }
+
+     .reviews-header {
+      display: block;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+  }
+
+  @media (max-width: 860px) {
+    .review-left img {
+      margin-left: 0px;
+    }
+
+
+  }
+
+  @media (max-width: 640px) {
+    .subtitle span {
+      font-size: 11.8vw;
+    }
+
+    .review-left img {
+      margin-left: 0px;
+      max-width: 220px;
+    }
+
+    .review-top h3, h4 {
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .review-text {
+     font-size: 16px;
+     font-weight: 400;
+     line-height: 20px;
+    }
+
+    .arrow svg {
+      display: none;
+    }
+
+    .mobile_svg {
+      display: flex !important;
+    }
+
+    .reviews-slider-wrapper {
+      margin: 0px 22px;
+    }
+
+    .review-text {
+      max-width: 100%;
+      margin-top: 13px;
+      margin-bottom: 0;
+    }
+
+    .reviews-section {
+      padding: 25px 0px;
+    }
+
+    .shop-btn {
+      font-weight: 700;
+    }
+
+    .subtitle {
+      margin: 0px;
+    }
+
+    .review-top h4 {
+      font-size: 13px;
+    }
+
+    .reviews-header {
+      margin-bottom: 0;
+    }
+
+    .review-name {
+      color: #000;
+      text-align: center;
+      font-family: 'Graphik Wide Web';
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 30.6px; /* 255% */
+      letter-spacing: 0.36px;
+      margin: 0 0 10px;
+      display: block;
+    }
+  }
+
+  @media (max-width: 389px) {
+    .review-left img {
+      max-width: 140px;
+      margin-bottom: 5px;
+    }
+  }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+
+  const slider = document.querySelector('.reviews-slider');
+  const viewport = document.querySelector('.reviews-slider-viewport');
+  const slides = document.querySelectorAll('.review-slide');
+  const next = document.querySelector('.next');
+  const prev = document.querySelector('.prev');
+
+  const pauseBtn = document.querySelector('.pause_btn');
+  const playBtn = document.querySelector('.play_btn');
+
+  if (!slider || !viewport || slides.length === 0) return;
+
+  const speed = {{ section.settings.scroll_speed }} * 1000;
+
+  let interval = null;
+  let isAutoScrolling = false;
+
+  /* -----------------------
+  CREATE CLONES
+  ----------------------- */
+
+  const firstClone = slides[0].cloneNode(true);
+  const lastClone = slides[slides.length - 1].cloneNode(true);
+
+  slider.appendChild(firstClone);
+  slider.insertBefore(lastClone, slides[0]);
+
+  const allSlides = document.querySelectorAll('.review-slide');
+
+  let index = 1; // start on real first slide
+  const total = allSlides.length;
+
+  /* -----------------------
+  SLIDER POSITION
+  ----------------------- */
+
+  function updateSlider(animate = true) {
+
+    const slideWidth = viewport.offsetWidth;
+
+    if (!animate) {
+      slider.style.transition = "none";
+    } else {
+      slider.style.transition = "transform 0.5s ease";
+    }
+
+    slider.style.transform = `translateX(-${index * slideWidth}px)`;
+  }
+
+  /* -----------------------
+  NEXT
+  ----------------------- */
+
+  function nextSlide() {
+
+    if (index >= total - 1) return;
+
+    index++;
+    updateSlider();
+
+  }
+
+  /* -----------------------
+  PREV
+  ----------------------- */
+
+  function prevSlide() {
+
+    if (index <= 0) return;
+
+    index--;
+    updateSlider();
+
+  }
+
+  /* -----------------------
+  RESET WHEN HITTING CLONES
+  ----------------------- */
+
+  slider.addEventListener('transitionend', () => {
+
+    if (allSlides[index] === firstClone) {
+
+      slider.style.transition = "none";
+      index = 1;
+      updateSlider(false);
+
+    }
+
+    if (allSlides[index] === lastClone) {
+
+      slider.style.transition = "none";
+      index = total - 2;
+      updateSlider(false);
+
+    }
+
+  });
+
+  /* -----------------------
+  AUTOSCROLL
+  ----------------------- */
+
+  function startAutoScroll() {
+
+    if (!isAutoScrolling && total > 1) {
+
+      interval = setInterval(nextSlide, speed);
+      isAutoScrolling = true;
+      updateButtons();
+
+    }
+
+  }
+
+  function stopAutoScroll() {
+
+    clearInterval(interval);
+    interval = null;
+    isAutoScrolling = false;
+    updateButtons();
+
+  }
+
+  function toggleAutoScroll() {
+
+    if (isAutoScrolling) {
+      stopAutoScroll();
+    } else {
+      startAutoScroll();
+    }
+
+  }
+
+  /* -----------------------
+  BUTTON UI
+  ----------------------- */
+
+  function updateButtons() {
+
+    if (!pauseBtn || !playBtn) return;
+
+    if (isAutoScrolling) {
+
+      pauseBtn.classList.remove('clicked');
+      playBtn.classList.remove('clicked');
+
+    } else {
+
+      pauseBtn.classList.add('clicked');
+      playBtn.classList.add('clicked');
+
+    }
+
+  }
+
+  /* -----------------------
+  EVENTS
+  ----------------------- */
+
+  next?.addEventListener('click', () => {
+
+  const wasAutoScrolling = isAutoScrolling;
+
+  stopAutoScroll();
+  nextSlide();
+
+  if (wasAutoScrolling) {
+    startAutoScroll();
+  }
+
+});
+
+prev?.addEventListener('click', () => {
+
+  const wasAutoScrolling = isAutoScrolling;
+
+  stopAutoScroll();
+  prevSlide();
+
+  if (wasAutoScrolling) {
+    startAutoScroll();
+  }
+
+});
+
+  pauseBtn?.addEventListener('click', toggleAutoScroll);
+  playBtn?.addEventListener('click', toggleAutoScroll);
+
+  window.addEventListener('resize', () => updateSlider(false));
+
+  /* -----------------------
+  SWIPE
+  ----------------------- */
+
+  let startX = 0;
+
+  viewport.addEventListener('touchstart', e => {
+    startX = e.touches[0].clientX;
+  });
+
+  viewport.addEventListener('touchend', e => {
+
+    let diff = e.changedTouches[0].clientX - startX;
+
+    if (diff > 50) prevSlide();
+    if (diff < -50) nextSlide();
+
+  });
+
+  /* -----------------------
+  INIT
+  ----------------------- */
+
+  updateSlider(false);
+
+  {% if section.settings.auto_scroll %}
+    startAutoScroll();
+  {% else %}
+    updateButtons();
+  {% endif %}
+
+});
+</script>

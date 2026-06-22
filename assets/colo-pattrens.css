@@ -1,0 +1,36 @@
+.color-pattren__label {
+    margin: 0;
+}
+
+.product__buttons:has(.color-pattren__labels-wrapper) {
+    margin-top: 33px !important;
+}
+
+
+.color-pattren__label,
+.color-pattren__label * {
+    text-transform: uppercase;
+    color: #000;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.color-pattren__label span {
+    color: #5D5D5D;
+}
+
+.color-pattren__labels-wrapper {
+    margin-bottom: 16px;
+    background: #fff;
+    position: relative;
+    z-index: 3;
+}
+
+@media (max-width: 767px) {
+    .product__buttons:has(.color-pattren__labels-wrapper) {
+        margin-top: 0 !important;
+    }
+}

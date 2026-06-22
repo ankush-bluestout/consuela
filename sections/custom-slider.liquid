@@ -1,0 +1,453 @@
+<!-- Include Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+{% if section.settings.show_title %}
+  <h2 class="slider-title">{{ section.settings.slider_title }}</h2>
+{% endif %}
+<section id="custom-slider" class="custom-slider">
+  <div class="swiper custom-swiper">
+    <div class="swiper-wrapper">
+      {% if section.settings.source_type == 'collection' and section.settings.collection %}
+        {% for product in collections[section.settings.collection].products %}
+          <div class="swiper-slide slider-item">
+            <a class="product-card-simple" href="{{ product.url }}">
+              <img src="{{ product.featured_image | img_url: 'master' }}" alt="{{ product.title }}">
+              <div class="divs">
+                <h2>
+                  <span class="fake-link">{{ product.title }}</span>
+                </h2>
+                <p>{{ product.price | money_without_trailing_zeros }}</p>
+              </div>
+            </a>
+          </div>
+        {% endfor %}
+      {% endif %}
+    </div>
+
+    <!-- Navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+</section>
+
+<!-- Custom CSS -->
+<style>
+    #custom-slider {
+      position: relative;
+      border-bottom: 0.8px solid rgba(217,217,217,.5);
+      border-top: 0.8px solid rgba(217,217,217,.5);
+    }
+
+    @media (max-width: 3840px) {
+      #custom-slider {
+        margin: 0px -450px 0px -450px !important;
+      }
+    }
+
+    @media (max-width: 2880px) {
+      #custom-slider {
+        margin: 0px -320px 0px -320px !important;
+      }
+    }
+
+    @media (max-width: 2560px) {
+      #custom-slider {
+        margin: 0px -300px 0px -300px !important;
+      }
+    }
+
+    @media (max-width: 2048px) {
+      #custom-slider {
+        margin: 0px -250px 0px -250px !important;
+      }
+    }
+
+    @media (max-width: 1920px) {
+      #custom-slider {
+        margin: 0px -230px 0px -230px !important;
+      }
+    }
+
+    @media (max-width: 1440px) {
+      #custom-slider {
+        margin: 0px -155px 0px -155px !important;
+      }
+    }
+
+    @media (max-width: 1024px) {
+      #custom-slider {
+        margin: 0px -119px 0px -119px !important;
+      }
+    }
+
+    @media (max-width: 768px) {
+      #custom-slider {
+        margin: 0px 0px 0px -181px !important;
+      }
+    }
+
+    @media (max-width: 550px) {
+      #custom-slider {
+        margin: 0px 0px 0px -100px !important;
+      }
+    }
+
+
+    .slider-title {
+      text-align: center;
+      font-family: var(--font--graphik-cond) !important;
+      font-size: 46px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin: 15px 0 !important;
+    }
+
+    /* IMPORTANT — make widths predictable */
+    .custom-swiper .swiper-slide {
+      width: 20%;              /* 3 full + 2 half → DESKTOP */
+      box-sizing: border-box;
+    }
+
+    .slider-item {
+      border-right: 0.8px solid rgba(217,217,217,.5);
+      padding-bottom: 10px;
+    }
+
+    .product-card-simple {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      text-align: center;
+    }
+
+    @media (max-width: 450px) {
+
+      .product-card-simple img {
+      margin-top: -30px !important;
+      }
+    }
+
+    .product-card-simple img {
+      object-fit: contain;
+      max-width: 100%;
+      height: 343px;
+      margin-bottom: -30px;
+      margin-top: 20px;
+    }
+
+    .divs h2 {
+      margin: 0px;
+    }
+    .divs h2 span {
+      font-size: 12px;
+      font-weight: 500;
+      color: #232323;
+    }
+
+    .divs p {
+      font-size: 12px;
+      margin: 0px;
+    }
+
+    /* Desktop: 3 full + 2 half visible */
+    @media (min-width: 1025px) {
+      .custom-swiper .swiper-slide {
+        width: 20%;
+      }
+    }
+
+    /* Tablet: 2 full + 1 half */
+    @media (min-width: 768px) and (max-width: 1024px) {
+      .custom-swiper .swiper-slide {
+        width: 33.33%;
+      }
+    }
+
+    /* Mobile: 1 full + 1 half */
+    @media (max-width: 767px) {
+      .custom-swiper .swiper-slide {
+        width: 60%;
+      }
+    }
+
+    /* Navigation buttons */
+    .swiper-button-prev,
+    .swiper-button-next {
+      display: flex !important;
+      justify-content: center;
+      align-items: center;
+      width: 24px;
+      height: 24px;
+      box-shadow: 0 0 6px rgba(0,0,0,0.15);
+      z-index: 20;
+      color: black;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .swiper-button-next:after, .swiper-button-prev:after {
+      border-radius: 39px;
+      background-color: white;
+      padding: 13px 18px;
+      box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.12);
+      font-weight: bold;
+      font-size: 25px !important;
+    }
+
+    @media (max-width: 768px) {
+    .swiper-button-next:after, .swiper-button-prev:after {
+      font-size: 19px !important;
+    }
+    }
+
+     @media (max-width: 3840px) {
+       .swiper-button-next {
+        right: 11% !important;
+      }
+
+      .swiper-button-prev {
+        left: 11% !important;
+      }
+    }
+
+     @media (max-width: 2800px) {
+       .swiper-button-next {
+        right: 11% !important;
+      }
+
+      .swiper-button-prev {
+        left: 11% !important;
+      }
+    }
+
+    @media (max-width: 2560px) {
+       .swiper-button-next {
+        right: 12% !important;
+      }
+
+      .swiper-button-prev {
+        left: 12% !important;
+      }
+    }
+    @media (max-width: 1920px) {
+      .swiper-button-next {
+        right: 12% !important;
+      }
+
+      .swiper-button-prev {
+        left: 12% !important;
+      }
+    }
+
+     @media (max-width: 1680px) {
+      .swiper-button-next {
+        right: 13% !important;
+      }
+
+      .swiper-button-prev {
+        left: 13% !important;
+      }
+    }
+
+    @media (max-width: 1440px) {
+      .swiper-button-next {
+        right: 11% !important;
+      }
+
+      .swiper-button-prev {
+        left: 11% !important;
+      }
+    }
+
+    @media (max-width: 1366px) {
+      .swiper-button-next {
+        right: 12% !important;
+      }
+
+      .swiper-button-prev {
+        left: 12% !important;
+      }
+    }
+
+     @media (max-width: 1280px) {
+      .swiper-button-next {
+        right: 13% !important;
+      }
+
+      .swiper-button-prev {
+        left: 13% !important;
+      }
+    }
+
+    @media (max-width: 1024px) {
+      .swiper-button-next {
+        right: 13% !important;
+      }
+
+      .swiper-button-prev {
+        left: 13% !important;
+      }
+
+      .swiper-button-next {
+        top: 16%;
+      }
+
+      .swiper-button-prev {
+        top: 16%;
+      }
+    }
+
+    @media (max-width: 820px) {
+      .swiper-button-prev {
+        left: 14% !important;
+      }
+
+      .swiper-button-next {
+        right: 14% !important;
+      }
+    }
+
+     @media (max-width: 768px) {
+      .swiper-button-next {
+        right: 3% !important;
+      }
+
+      .swiper-button-prev {
+        left: 22% !important;
+      }
+    }
+
+     @media (max-width: 550px) {
+      .swiper-button-next {
+        right: 4% !important;
+      }
+
+      .swiper-button-prev {
+        left: 19% !important;
+      }
+    }
+
+    @media (max-width: 428px) {
+    .swiper-button-prev {
+      left: 24% !important;
+    }
+
+    .swiper-button-next {
+      right: 5% !important;
+    }
+    }
+
+    @media (max-width: 425px) {
+      .swiper-button-prev {
+        left: 24% !important;
+      }
+    }
+
+    @media (max-width: 420px) {
+     .swiper-slide {
+      height: auto !important;
+    }
+    }
+
+    @media (max-width: 393px) {
+    .swiper-button-prev {
+      left: 25% !important;
+    }
+
+    .swiper-button-next {
+      right: 5% !important;
+    }
+
+    .swiper-button-next:after, .swiper-button-prev:after {
+      font-size: 17px !important;
+    }
+    }
+
+     @media (max-width: 375px) {
+      .swiper-button-prev {
+        left: 26% !important;
+      }
+    }
+    /* Hide arrows on phones */
+    {%  if section.settings.show_on_mobile == true %}
+    @media (max-width: 1000px) {
+      .swiper-button-prev,
+      .swiper-button-next {
+        display: none !important;
+      }
+    }
+  {%  endif %}
+
+    }
+</style>
+
+{% schema %}
+{
+  "name": "Custom Slider",
+  "settings": [
+    {
+      "type": "select",
+      "id": "source_type",
+      "label": "Select Source",
+      "options": [{ "label": "Collection", "value": "collection" }],
+      "default": "collection"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Choose Collection",
+      "info": "Used only if source type is collection."
+    },
+    {
+      "type": "text",
+      "id": "slider_title",
+      "label": "Slider Title",
+      "default": "Featured Products"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_title",
+      "label": "Show Slider Title",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_on_mobile",
+      "label": "Hide Arrow on Mobile"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Slider",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    new Swiper('.custom-swiper', {
+      slidesPerView: 5,
+      spaceBetween: 10,
+      loop: true,
+
+      breakpoints: {
+        360: { slidesPerView: 2.5 },
+        390: { slidesPerView: 2.5 },
+        425: { slidesPerView: 2.5 },
+        768: { slidesPerView: 2.5 },
+        820: { slidesPerView: 3 },
+        1024: { slidesPerView: 5 },
+      },
+
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  });
+</script>

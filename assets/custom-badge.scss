@@ -1,0 +1,83 @@
+.card__badge {
+  .badge {
+    &.sold-out {
+      width: 80px;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 25px;
+      font-family: var(--font--graphik-cond);
+      padding: 0;
+      text-align: center;
+      border-radius: 50%;
+      transform: rotate(-45deg);
+      letter-spacing: normal;
+      @media screen and (max-width: 1200px) {
+        width: 46px;
+        height: 46px;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+#predictive-search-results-list {
+  .card-wrapper {
+    &:hover {
+      .card__badge {
+        .badge {
+          &.sold-out {
+            border: none;
+          }
+          &.on-tag {
+            border: none;
+          }
+        }
+      }
+    }
+    .card__badge {
+      .badge {
+        &.sold-out {
+          border: 2px solid white;
+        }
+        &.on-tag {
+          border: 1px solid white;
+        }
+        &.low-stock {
+            font-family: var(--font--graphik-wide) !important;
+            color: #232323 !important;
+            font-size: 12px !important;
+            font-style: normal !important;
+            font-weight: 700 !important;
+            line-height: 11px !important;
+            text-transform: uppercase !important;
+            box-shadow: none !important;
+            border: none !important;
+            width: 65px !important;
+            padding: 0px !important;
+            text-align: left !important;
+            background: none !important;
+        }
+        &.on-sale {
+          border: none !important;
+          box-shadow: none !important;
+          color: #232323 !important;
+          font-size: 12px !important;
+          font-style: normal !important;
+          font-weight: 700 !important;
+          line-height: 11px !important;
+          text-transform: uppercase !important;
+          transform: rotate(0deg) !important;
+          width: auto;
+          background: none !important;
+          font-family: var(--font--graphik-wide) !important;
+        &::before {
+          background: none !important;
+        }
+        }
+      }
+    }
+  }
+  
+}

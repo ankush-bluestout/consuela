@@ -1,0 +1,145 @@
+{% comment %}
+  Two Image Banner Section
+  - Title centered at top
+  - Two side-by-side images below
+  - Each image clickable with dynamic link
+  - Images adapt height naturally (no cropping)
+  - Responsive and flexible
+{% endcomment %}
+
+<section class="two-image-banner">
+  {% if section.settings.main_title != blank %}
+    <h2 class="two-image-banner__title">{{ section.settings.main_title }}</h2>
+  {% endif %}
+
+  <div class="two-image-banner__wrapper">
+    {% for block in section.blocks %}
+      <div class="two-image-banner__item" id="block-{{ block.id }}">
+        {% if block.settings.link != blank %}
+          <a href="{{ block.settings.link }}" class="two-image-banner__link">
+        {% endif %}
+            {% if block.settings.image != blank %}
+              <img 
+                src="{{ block.settings.image | img_url: 'master' }}" 
+                alt="Banner Image"
+                class="two-image-banner__image"
+                loading="lazy"
+                width=""
+                height=""
+              >
+            {% else %}
+              {{ 'image' | placeholder_svg_tag }}
+            {% endif %}
+        {% if block.settings.link != blank %}
+          </a>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+<style>
+  .two-image-banner {
+    text-align: center;
+    padding: 74px 50px 60px 50px;
+    width: 100%;
+    margin: auto;
+  }
+
+  .two-image-banner__title {
+    color: #000;
+    text-align: center;
+    font-family:  var(--font--graphik-cond);
+    font-size: 46px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 60px;
+    margin: 0px;
+    margin-bottom: 24px;
+    letter-spacing: 1.404px;
+    text-transform: uppercase;
+  }
+
+  .two-image-banner__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);  
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .two-image-banner__link {
+    display:flex;
+    width: 100%;
+    text-decoration: none;
+  }
+
+  .two-image-banner__image {
+    transition: transform 0.3s ease;
+    max-width: 100%;
+  }
+  
+  @media (max-width: 768px) {
+    .two-image-banner__wrapper {
+      grid-template-columns: repeat(1,1fr);
+      padding: 0px;
+    }
+
+    .two-image-banner {
+      padding: 74px 0px 0px 0px !important;
+    }
+
+  }
+
+  @media (max-width: 425px) {
+    .two-image-banner__item {
+      max-width: 100%;
+    }
+
+    .two-image-banner__title {
+        font-size: 32px;
+    }
+
+    .two-image-banner {
+        padding: 0px !important;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Two Image Banner",
+  "settings": [
+    {
+      "type": "text",
+      "id": "main_title",
+      "label": "Main Section Title",
+      "default": "Our Featured Styles"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image_block",
+      "name": "Image Block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link URL"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 2,
+  "presets": [
+    {
+      "name": "Two Image Banner",
+      "category": "Image"
+    }
+  ]
+}
+{% endschema %}

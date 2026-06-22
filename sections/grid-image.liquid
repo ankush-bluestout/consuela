@@ -1,0 +1,186 @@
+<section class="shop-top-styles">
+  {% if section.settings.main_title != blank %}
+    <h2 class="shop-top-styles__title">{{ section.settings.main_title }}</h2>
+  {% endif %}
+
+  <div class="shop-top-styles__grid">
+    {% for block in section.blocks %}
+      <div class="shop-top-styles__item" id="block-{{ block.id }}">
+        {% if block.settings.link != blank %}
+          <a href="{{ block.settings.link }}" class="shop-top-styles__link">
+        {% endif %}
+            {% if block.settings.image != blank %}
+              <img 
+                src="{{ block.settings.image | img_url: 'master' }}" 
+                alt="{{ block.settings.subhead | escape }}"
+                class="shop-top-styles__image"
+                loading="lazy"
+                width=""
+                height=""
+              >
+            {% else %}
+              {{ 'image' | placeholder_svg_tag }}
+            {% endif %}
+            {% if block.settings.subhead != blank %}
+              <div class="shop-top-styles__subhead" href="{{ block.settings.link }}">{{ block.settings.subhead }}</div>
+            {% endif %}
+        {% if block.settings.link != blank %}
+          </a>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+<style>
+  .shop-top-styles {
+    text-align: center;
+    padding: 0px 50px;
+    margin: auto;
+  }
+
+  .shop-top-styles__title {
+    text-align: center;
+    margin: 0px;
+    margin-top: 2px;
+    margin-bottom: 16px;
+    color: #000;
+    text-align: center;
+    font-family: var(--font--graphik-cond);
+    font-size: 46px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 60px;
+    letter-spacing: 1.404px;
+    text-transform: uppercase;
+  }
+
+  .shop-top-styles__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: space-around;
+    gap: 32px;
+  }
+
+  .shop-top-styles__item {
+    flex: 1 1 calc(25% - 30px);
+    text-align: center;
+  }
+
+  .shop-top-styles__link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .shop-top-styles__image {
+    display: block;
+    border-radius: 0;
+    transition: transform 0.3s ease;
+    width: 100%;
+  }
+
+  .shop-top-styles__link:hover .shop-top-styles__image {
+    transform: scale(1.03);
+  }
+
+  .shop-top-styles__subhead {
+    color: #000;
+    text-align: center;
+    font-family: var(--font--graphik-wide);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    text-transform: uppercase;
+    margin-top: 18px;
+    margin-bottom: 33px;
+  }
+
+  @media (max-width: 1024px) {
+    .shop-top-styles__image {
+      width: 100% !important;
+    }
+    
+    .shop-top-styles__subhead {
+      font-size: 11px;
+      margin-bottom: 0px;
+      line-height: 17px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .shop-top-styles__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  {% comment %} @media (max-width: 425px) { {% endcomment %}
+  @media (max-width: 375px) {
+    .shop-top-styles {
+      padding: 0px 21px !important;
+    }
+
+    .shop-top-styles__title {
+      font-size: 32px;
+    }
+
+
+    .shop-top-styles__grid {
+      gao: 22px !important;
+    }
+
+  }
+
+  {% comment %} @media (max-width: 375px) { {% endcomment %}
+
+    .shop-top-styles__grid {
+      gap: 16.7px !important;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Shop Top Styles (8)",
+  "settings": [
+    {
+      "type": "text",
+      "id": "main_title",
+      "label": "Main Section Title",
+      "default": "Shop Top Styles"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "style_block",
+      "name": "Style Block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "subhead",
+          "label": "Subhead Text",
+          "default": "Subhead Title"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link URL"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 8,
+  "presets": [
+    {
+      "name": "Shop Top Styles (8)",
+      "category": "Image"
+    }
+  ]
+}
+{% endschema %}
