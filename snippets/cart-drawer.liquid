@@ -364,6 +364,19 @@
             {{ 'sections.cart.checkout' | t }}
           </button>
 
+
+         
+          <div id="shopify-installments-prerendered" style="display:none;">
+               {% for item in cart.items %}
+                {% form 'product', item.product, class: 'installment caption-large' %}
+                <input type="hidden" name="id" value="{{ item.variant_id }}">
+                {{ form | payment_terms }}
+                 {% endform %}
+                  {% break %}
+               {% endfor %}
+          </div>
+
+
           {% comment %}<button class="button button--secondary" type="button" onclick="this.closest('cart-drawer').close()" aria-label="{{ 'accessibility.close' | t }}">
             Keep Shopping          
           </button>{% endcomment %}

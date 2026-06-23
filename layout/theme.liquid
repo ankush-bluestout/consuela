@@ -36,13 +36,15 @@
   {% endif %}
   <link rel="stylesheet" href="{{ 'custom.css' | asset_url }}"> 
   <link rel="stylesheet" href="{{ 'plugins.css' | asset_url }}">
+  <link rel="stylesheet" href="{{ 'bst-custom-style.css' | asset_url }}">
   <noscript>{{ 'plugins.css' | asset_url | stylesheet_tag }}</noscript>
   <link rel="stylesheet" href="{{ 'base-custom.css' | asset_url }}">
   <noscript>{{ 'base-custom.css' | asset_url | stylesheet_tag }}</noscript>
   <script src="{{ 'plugins.js' | asset_url }}" defer="defer"></script>
   <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
   <script src="{{ 'custom.js' | asset_url }}" defer="defer"></script>
-    <script src="{{ 'custom-monitor.js' | asset_url }}" defer="defer"></script>
+  <script src="{{ 'bst-custom.js' | asset_url }}" defer="defer"></script>
+  <script src="{{ 'custom-monitor.js' | asset_url }}" defer="defer"></script>
   <link rel="stylesheet" href="{{ 'rebuy-smart-cart-upsell.css' | asset_url }}">
   <noscript>{{ 'rebuy-smart-cart-upsell.css' | asset_url | stylesheet_tag }}</noscript>
   <script src="{{ 'rebuy-smart-cart-upsell.js' | asset_url }}" defer="defer"></script>
@@ -50,6 +52,7 @@
   <script src="https://strn.rise-ai.com/?shop=consuelastyle.myshopify.com" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
 
   <script>window.Shopify = window.Shopify || {theme: {id: {{ theme.id }}, role: '{{ theme.role }}' } };
       window._template = {
@@ -406,35 +409,4 @@
 
 </html>
 
-{% if cart.currency.iso_code == shop.currency %}
-<script type="text/javascript" defer="defer">
-  if(window.innerWidth > 750){
-    var afterpay_msg_size = 'sm';
-  }
-  else{
-    var afterpay_msg_size = 'xs';
-  }
-var afterpay_product_integration_enabled = true;
-var afterpay_product_selector = '#afterpay_install_ele';
-var afterpay_variable_price_fallback = false;
-var afterpay_variable_price_fallback_selector = '';
-var afterpay_variable_price_fallback_method = 'interval';
-var afterpay_js_language = {{ localization.language.iso_code | slice: 0, 2 | json }};
-var afterpay_js_country = {{ localization.country.iso_code | json }};
-var afterpay_shop_currency = {{ shop.currency | json }};
-var afterpay_cart_currency = {{ cart.currency.iso_code | json }};
-var afterpay_shop_money_format = {{ shop.money_format | json }};
-var afterpay_shop_permanent_domain = {{ shop.permanent_domain | json }};
-var afterpay_theme_name = {{ theme.name | json }};
-var afterpay_product = {{ product | json }};
-var afterpay_product_collections = {{ product.collections | map: 'title' | join: ',' | json }};
-var afterpay_current_variant = {{ product.selected_or_first_available_variant | json }};
-var afterpay_cart_total_price = {{ cart.total_price | json }};
-var afterpay_cart_skus = {{cart.items | map: 'sku' | join: ',' | json }};
-var afterpay_cart_collections = {{cart.items | map: 'product' | map: 'collections' | map: 'title' | uniq | join: ',' | json }};
-var afterpay_js_snippet_version = '1.2.1';
-</script>
-<script type="text/javascript" src="https://static.afterpay.com/shopify-afterpay-javascript.js"></script>
-{% else %}
-  <!-- Afterpay disabled: {{ cart.currency.iso_code }} != {{ shop.currency }} -->
-{% endif %}
+
