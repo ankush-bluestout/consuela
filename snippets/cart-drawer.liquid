@@ -364,14 +364,6 @@
             {{ 'sections.cart.checkout' | t }}
           </button>
 
-
-<div id="shopify-installments-prerendered" style="display:none;">
-  {%- form 'product', cart.items.first.product, id: 'rebuy-installment-form', class: 'installment caption-large' -%}
-    <input type="hidden" name="id" value="{{ cart.items.first.variant.id }}">
-    {{ form | payment_terms }}
-  {%- endform -%}
-</div>
-
           {% comment %}<button class="button button--secondary" type="button" onclick="this.closest('cart-drawer').close()" aria-label="{{ 'accessibility.close' | t }}">
             Keep Shopping          
           </button>{% endcomment %}
