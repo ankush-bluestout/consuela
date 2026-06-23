@@ -1,3 +1,4 @@
+
 function rebuyinjectInstallments() {
   const slot = document.querySelector('[data-rebuy-cart-additional-checkout-buttons]');
   const source = document.getElementById('shopify-installments-prerendered');
@@ -10,27 +11,25 @@ function rebuyinjectInstallments() {
   slot.appendChild(clone);
 
   setTimeout(rebuystyleInstallments, 200);
-  setTimeout(rebuystyleInstallments, 500);
-  setTimeout(rebuystyleInstallments, 1000);
+  setTimeout(rebuystyleInstallments, 600);
 }
 
 function rebuystyleInstallments() {
   const slot = document.querySelector('[data-rebuy-cart-additional-checkout-buttons]');
   if (!slot) return;
 
-  const hosts = slot.querySelectorAll('shopify-payment-terms');
-  hosts.forEach(function(host) {
+  slot.querySelectorAll('shopify-payment-terms').forEach(function(host) {
     if (!host.shadowRoot) return;
+    if (host.shadowRoot.querySelector('#rebuy-installments-style')) return;
 
-     host.shadowRoot.querySelectorAll('.font-bold').forEach(function(el) {
+    host.shadowRoot.querySelectorAll('.font-bold').forEach(function(el) {
       el.classList.remove('font-bold');
     });
-    const old = host.shadowRoot.querySelector('#rebuy-installments-style');
-    if (old) old.remove();
+
     const style = document.createElement('style');
     style.id = 'rebuy-installments-style';
     style.textContent = `
-      p{
+      p {
         color: #ffffff;
         fill: #ffffff;
         text-align: center;
@@ -45,26 +44,22 @@ function rebuystyleInstallments() {
 }
 
 
-
 function stylePDPInstallments() {
   const rebuySlot = document.querySelector('[data-rebuy-cart-additional-checkout-buttons]');
 
   document.querySelectorAll('shopify-payment-terms').forEach(function(host) {
-    // Skip the one inside rebuy cart
     if (rebuySlot && rebuySlot.contains(host)) return;
     if (!host.shadowRoot) return;
+    if (host.shadowRoot.querySelector('#pdp-installments-style')) return;
 
     host.shadowRoot.querySelectorAll('.font-bold').forEach(function(el) {
       el.classList.remove('font-bold');
     });
 
-    const old = host.shadowRoot.querySelector('#pdp-installments-style');
-    if (old) old.remove();
-
     const style = document.createElement('style');
-    style.id = 'rebuy-installments-style';
+    style.id = 'pdp-installments-style';
     style.textContent = `
-      p{
+      p {
         font-family: var(--font-body-family);
         line-height: 15px;
       }
@@ -74,24 +69,16 @@ function stylePDPInstallments() {
 }
 
 
-
 document.addEventListener('rebuy:cart.ready', rebuyinjectInstallments);
 document.addEventListener('rebuy:cart.open', rebuyinjectInstallments);
 document.addEventListener('rebuy:cart.change', rebuyinjectInstallments);
 
 document.addEventListener('rebuy:cart.open', function() {
-  setTimeout(rebuystyleInstallments, 100);
   setTimeout(rebuystyleInstallments, 300);
-  setTimeout(rebuystyleInstallments, 600);
+  setTimeout(rebuystyleInstallments, 700);
 });
 
-const rebuyObserver = new MutationObserver(function() {
-  rebuyinjectInstallments();
-  rebuystyleInstallments();
-  stylePDPInstallments();
-});
 
-rebuyObserver.observe(document.body, {
-  childList: true,
-  subtree: true
+document.addEventListener('DOMContentLoaded', function() {
+  setTimeout(stylePDPInstallments, 500);
 });
