@@ -13,3 +13,13 @@ justify-content: start;
     margin: 10px 0px 20px 0px;
     width: 100%;
 }
+
+@media (max-width: 425px) {
+.freeshipping_note p {
+    margin: 0px 0px 10px 0px;
+}
+.bst-shoppay-style {
+    margin: 5px 10px 10px 0px;
+}
+
+}
